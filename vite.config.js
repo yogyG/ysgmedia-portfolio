@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
+  base: process.env.GITHUB_ACTIONS ? '/ysgmedia-portfolio/' : '/',
   root: '.',
   build: {
     outDir: 'dist',
