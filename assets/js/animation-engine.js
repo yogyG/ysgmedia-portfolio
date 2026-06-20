@@ -8,7 +8,32 @@ document.addEventListener('DOMContentLoaded', () => {
   initTextLoop();
   initCounters();
   initDashboardGraph();
+  initMobileNav();
 });
+
+/**
+ * 0. Mobile Hamburger Menu Toggle
+ */
+function initMobileNav() {
+  const hamburger = document.getElementById('mobile-hamburger');
+  const navMenu = document.getElementById('nav-menu');
+  
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navMenu.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    // Close menu if user clicks outside of header
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+      }
+    });
+  }
+}
 
 /**
  * 1. Scroll-Triggered Reveal Engine (Intersection Observer)
