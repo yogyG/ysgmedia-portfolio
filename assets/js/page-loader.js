@@ -3,13 +3,13 @@ import { buildServiceCard, buildCaseStudyCard, buildTestimonialCard, generateHea
 async function initPage() {
   try {
     const [companyRes, servicesRes, caseStudiesRes, testimonialsRes, contactRes, industriesRes, blogsRes] = await Promise.all([
-      fetch('/data/company.json'),
-      fetch('/data/services.json'),
-      fetch('/data/case-studies.json'),
-      fetch('/data/testimonials.json'),
-      fetch('/data/contact.json'),
-      fetch('/data/industries.json'),
-      fetch('/data/blogs.json')
+      fetch('data/company.json'),
+      fetch('data/services.json'),
+      fetch('data/case-studies.json'),
+      fetch('data/testimonials.json'),
+      fetch('data/contact.json'),
+      fetch('data/industries.json'),
+      fetch('data/blogs.json')
     ]);
 
     const company = await companyRes.json();

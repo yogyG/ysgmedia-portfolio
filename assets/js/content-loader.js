@@ -50,7 +50,7 @@ export function buildTestimonialCard(testimonial) {
       </div>
       <p style="color: var(--text-secondary); font-style: italic; margin-bottom: var(--spacing-sm);">"${testimonial.quote}"</p>
       <div style="display: flex; align-items: center; gap: var(--spacing-sm); margin-top: var(--spacing-sm);">
-        <img src="${testimonial.avatarUrl || '/assets/images/logos/placeholder_avatar.png'}" alt="Avatar" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--bg-primary);" />
+        <img src="${testimonial.avatarUrl || 'assets/images/logos/placeholder_avatar.png'}" alt="Avatar" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--bg-primary);" />
         <div style="font-weight: 600; font-size: 0.9rem; color: var(--text-primary);">${testimonial.clientName}</div>
       </div>
     </div>
@@ -59,30 +59,30 @@ export function buildTestimonialCard(testimonial) {
 
 export function generateHeader(companyData, activePage = 'home') {
   const links = [
-    { name: 'Home', url: '/' },
-    { name: 'Services', url: '/services.html' },
-    { name: 'Case Studies', url: '/case-studies.html' },
-    { name: 'Blog', url: '/blog.html' },
-    { name: 'About', url: '/about.html' },
-    { name: 'Contact', url: '/contact.html' }
+    { name: 'Home', url: 'index.html' },
+    { name: 'Services', url: 'services.html' },
+    { name: 'Case Studies', url: 'case-studies.html' },
+    { name: 'Blog', url: 'blog.html' },
+    { name: 'About', url: 'about.html' },
+    { name: 'Contact', url: 'contact.html' }
   ];
 
   const navLinks = links.map(link => {
-    const isActive = (activePage === link.name.toLowerCase().replace(' ', '-')) || (activePage === 'home' && link.url === '/');
+    const isActive = (activePage === link.name.toLowerCase().replace(' ', '-')) || (activePage === 'home' && link.url === 'index.html');
     return `<a href="${link.url}" style="color: ${isActive ? 'var(--accent-primary)' : 'var(--text-primary)'}; font-weight: ${isActive ? '600' : '500'}; padding: 0.5rem 1rem;">${link.name}</a>`;
   }).join('');
 
   return `
     <header style="display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-sm) var(--spacing-lg); background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-muted);">
       <div class="logo">
-        <a href="/" style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; color: var(--bg-secondary);">YSG<span style="color: var(--accent-primary);">MEDIA</span></a>
+        <a href="index.html" style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; color: var(--bg-secondary);">YSG<span style="color: var(--accent-primary);">MEDIA</span></a>
       </div>
       <nav style="display: flex; gap: var(--spacing-xs); align-items: center;">
         ${navLinks}
       </nav>
       <div class="header-actions" style="display: flex; gap: var(--spacing-sm);">
-        <a href="/contact.html" class="btn-secondary" style="padding: 0.6rem 1.2rem; background: var(--bg-secondary); color: white; border-radius: var(--border-radius-sm); font-weight: 600;">Book Free Consultation</a>
-        <a href="https://wa.me/${companyData.whatsappNumber.replace(/\\D/g, '')}?text=${encodeURIComponent(companyData.whatsappWelcomeMessage)}" target="_blank" style="padding: 0.6rem 1rem; background: var(--accent-whatsapp); color: white; border-radius: var(--border-radius-sm); font-weight: 600; display: flex; align-items: center; gap: 8px;">
+        <a href="contact.html" class="btn-secondary" style="padding: 0.6rem 1.2rem; background: var(--bg-secondary); color: white; border-radius: var(--border-radius-sm); font-weight: 600;">Book Free Consultation</a>
+        <a href="https://wa.me/${companyData.whatsappNumber.replace(/\D/g, '')}?text=${encodeURIComponent(companyData.whatsappWelcomeMessage)}" target="_blank" style="padding: 0.6rem 1rem; background: var(--accent-whatsapp); color: white; border-radius: var(--border-radius-sm); font-weight: 600; display: flex; align-items: center; gap: 8px;">
            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.031 21.055c-1.579-.001-3.13-.42-4.498-1.214l-.322-.188-3.342.877.892-3.257-.206-.328c-.869-1.385-1.332-2.983-1.33-4.629.003-4.793 3.905-8.694 8.707-8.694 2.324.001 4.506.907 6.148 2.551 1.642 1.644 2.548 3.828 2.547 6.151-.004 4.792-3.906 8.691-8.596 8.731zm-6.177-3.916l1.97-.517.18.106c1.233.722 2.628 1.103 4.027 1.104 4.148-.002 7.525-3.379 7.527-7.528.001-2.008-.781-3.896-2.202-5.316-1.421-1.42-3.311-2.201-5.321-2.202-4.152-.002-7.529 3.376-7.531 7.528-.002 1.442.392 2.862 1.144 4.113l.117.195-.584 2.132-1.327-4.115zm10.597-6.52c-.227-.114-1.341-.663-1.549-.739-.208-.076-.359-.114-.511.114-.152.228-.583.739-.714.891-.131.152-.262.171-.489.057-.227-.114-.958-.353-1.825-1.129-.675-.604-1.13-1.35-1.261-1.578-.131-.228-.014-.351.1-.465.103-.102.227-.266.341-.399.114-.133.152-.228.227-.38.076-.152.038-.285-.019-.399-.057-.114-.511-1.235-.7-1.691-.184-.444-.372-.384-.511-.391-.131-.007-.282-.007-.434-.007s-.398.057-.607.285c-.208.228-.795.779-.795 1.899s.814 2.203.928 2.355c.114.152 1.606 2.451 3.889 3.436 2.283.985 2.283.665 2.699.627.416-.038 1.341-.551 1.53-1.083.189-.532.189-.988.132-1.083-.057-.095-.208-.152-.435-.266z"></path></svg>
            WhatsApp Us
         </a>
@@ -103,11 +103,11 @@ export function generateFooter(companyData, contactData) {
         <div>
           <h3 style="color: white; margin-bottom: var(--spacing-sm);">Quick Links</h3>
           <ul style="list-style: none;">
-            <li style="margin-bottom: 0.5rem;"><a href="/">Home</a></li>
-            <li style="margin-bottom: 0.5rem;"><a href="/services.html">Services</a></li>
-            <li style="margin-bottom: 0.5rem;"><a href="/case-studies.html">Case Studies</a></li>
-            <li style="margin-bottom: 0.5rem;"><a href="/about.html">About</a></li>
-            <li style="margin-bottom: 0.5rem;"><a href="/contact.html">Contact</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="index.html">Home</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="services.html">Services</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="case-studies.html">Case Studies</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="about.html">About</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div>
