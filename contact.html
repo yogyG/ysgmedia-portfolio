@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | YSG Media</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body>
+    <div id="header-mount"></div>
+
+    <main>
+      <section style="background: var(--bg-secondary); color: white; padding: var(--spacing-xl) var(--spacing-lg); text-align: center;">
+        <h1 style="font-size: 3.5rem; margin-bottom: var(--spacing-sm); color: white;">Let's Grow Your Business Together</h1>
+        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto; font-size: 1.1rem;">Book a free consultation call and let's discuss how we can help you get more leads and sales.</p>
+      </section>
+
+      <section style="padding: var(--spacing-xl) var(--spacing-lg); max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: var(--spacing-xl);">
+        
+        <div class="reveal-on-scroll" style="background: var(--bg-card); padding: var(--spacing-lg); border-radius: var(--border-radius-md); box-shadow: var(--shadow-card); border: 1px solid var(--border-muted);">
+          <h2 style="margin-bottom: var(--spacing-md); font-size: 2rem;">Request an Audit</h2>
+          <form style="display: flex; flex-direction: column; gap: var(--spacing-sm);">
+            <div>
+              <label style="display: block; margin-bottom: 0.5rem; font-weight: 500; font-size: 0.9rem;">Full Name</label>
+              <input type="text" placeholder="Jane Doe" style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-muted); border-radius: var(--border-radius-sm); font-family: var(--font-body);" required />
+            </div>
+            <div>
+              <label style="display: block; margin-bottom: 0.5rem; font-weight: 500; font-size: 0.9rem;">Email Address</label>
+              <input type="email" placeholder="jane@company.com" style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-muted); border-radius: var(--border-radius-sm); font-family: var(--font-body);" required />
+            </div>
+            <div>
+              <label style="display: block; margin-bottom: 0.5rem; font-weight: 500; font-size: 0.9rem;">Company Website</label>
+              <input type="url" placeholder="https://www.company.com" style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-muted); border-radius: var(--border-radius-sm); font-family: var(--font-body);" />
+            </div>
+            <div>
+              <label style="display: block; margin-bottom: 0.5rem; font-weight: 500; font-size: 0.9rem;">Biggest Growth Challenge</label>
+              <textarea placeholder="We need more high-quality leads..." style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-muted); border-radius: var(--border-radius-sm); font-family: var(--font-body); min-height: 120px; resize: vertical;" required></textarea>
+            </div>
+            <button type="submit" class="hover-lift btn-pulse" style="margin-top: var(--spacing-xs); padding: 1rem; background: var(--accent-primary); color: white; border: none; border-radius: var(--border-radius-sm); font-weight: 600; cursor: pointer; font-size: 1rem;">Send Request</button>
+          </form>
+        </div>
+
+        <div class="reveal-on-scroll delay-200" style="display: flex; flex-direction: column; justify-content: center; gap: var(--spacing-lg);">
+          <div>
+            <h3 style="font-size: 1.5rem; margin-bottom: var(--spacing-xs);">Prefer to Chat Directly?</h3>
+            <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md);">Our team is available Monday through Friday to discuss your marketing strategy.</p>
+            <a href="#" class="wa-link hover-lift whatsapp-breathe" style="display: inline-flex; align-items: center; gap: 8px; padding: 1rem 2rem; background: var(--accent-whatsapp); color: white; border-radius: var(--border-radius-sm); font-weight: 600;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.031 21.055c-1.579-.001-3.13-.42-4.498-1.214l-.322-.188-3.342.877.892-3.257-.206-.328c-.869-1.385-1.332-2.983-1.33-4.629.003-4.793 3.905-8.694 8.707-8.694 2.324.001 4.506.907 6.148 2.551 1.642 1.644 2.548 3.828 2.547 6.151-.004 4.792-3.906 8.691-8.596 8.731zm-6.177-3.916l1.97-.517.18.106c1.233.722 2.628 1.103 4.027 1.104 4.148-.002 7.525-3.379 7.527-7.528.001-2.008-.781-3.896-2.202-5.316-1.421-1.42-3.311-2.201-5.321-2.202-4.152-.002-7.529 3.376-7.531 7.528-.002 1.442.392 2.862 1.144 4.113l.117.195-.584 2.132-1.327-4.115zm10.597-6.52c-.227-.114-1.341-.663-1.549-.739-.208-.076-.359-.114-.511.114-.152.228-.583.739-.714.891-.131.152-.262.171-.489.057-.227-.114-.958-.353-1.825-1.129-.675-.604-1.13-1.35-1.261-1.578-.131-.228-.014-.351.1-.465.103-.102.227-.266.341-.399.114-.133.152-.228.227-.38.076-.152.038-.285-.019-.399-.057-.114-.511-1.235-.7-1.691-.184-.444-.372-.384-.511-.391-.131-.007-.282-.007-.434-.007s-.398.057-.607.285c-.208.228-.795.779-.795 1.899s.814 2.203.928 2.355c.114.152 1.606 2.451 3.889 3.436 2.283.985 2.283.665 2.699.627.416-.038 1.341-.551 1.53-1.083.189-.532.189-.988.132-1.083-.057-.095-.208-.152-.435-.266z"></path></svg>
+              Chat on WhatsApp
+            </a>
+          </div>
+          <div style="border-top: 1px solid var(--border-muted); padding-top: var(--spacing-md);">
+            <p style="color: var(--text-secondary); margin-bottom: 0.5rem;"><strong>Email:</strong> <br/>hello@ysgmedia.in</p>
+            <p style="color: var(--text-secondary); margin-bottom: 0.5rem;"><strong>Phone:</strong> <br/>+91 84080 18881</p>
+            <p style="color: var(--text-secondary); margin-bottom: 0.5rem;"><strong>Headquarters:</strong> <br/>Nagpur, Maharashtra, India</p>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <div id="footer-mount"></div>
+
+    <script type="module" src="/assets/js/page-loader.js"></script>
+    <script type="module" src="/assets/js/animation-engine.js"></script>
+  </body>
+</html>

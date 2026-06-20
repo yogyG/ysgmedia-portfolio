@@ -1,0 +1,51 @@
+[
+  {
+    "id": "meta-ads",
+    "title": "Meta Ads",
+    "description": "High-converting Facebook & Instagram ads that bring quality leads and sales.",
+    "icon": "meta-icon",
+    "ctaText": "Learn More"
+  },
+  {
+    "id": "google-ads",
+    "title": "Google Ads",
+    "description": "Search, Display & YouTube ads that put your business in front of ready-to-buy clients.",
+    "icon": "google-icon",
+    "ctaText": "Learn More"
+  },
+  {
+    "id": "social-media-management",
+    "title": "Social Media Management",
+    "description": "Engaging content, regular posting & community management.",
+    "icon": "social-icon",
+    "ctaText": "Learn More"
+  },
+  {
+    "id": "content-creation",
+    "title": "Content Creation",
+    "description": "High-quality creatives, videos & copies that attract and convert.",
+    "icon": "content-icon",
+    "ctaText": "Learn More"
+  },
+  {
+    "id": "creative-design",
+    "title": "Creative Design",
+    "description": "Eye-catching graphics, banners & designs that build your brand.",
+    "icon": "design-icon",
+    "ctaText": "Learn More"
+  },
+  {
+    "id": "landing-pages",
+    "title": "Landing Pages",
+    "description": "Conversion-focused landing pages that turn visitors into leads.",
+    "icon": "landing-icon",
+    "ctaText": "Learn More"
+  },
+  {
+    "id": "analytics-tracking",
+    "title": "Analytics & Tracking",
+    "description": "Conversion tracking, analytics setup & performance reporting.",
+    "icon": "analytics-icon",
+    "ctaText": "Learn More"
+  }
+]

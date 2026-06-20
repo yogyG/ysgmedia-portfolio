@@ -1,0 +1,132 @@
+@import './variables.css';
+
+/* Reset & Base Elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-smooth);
+}
+
+/* ==========================================================================
+   ANIMATION TOKENS & UTILITIES
+   ========================================================================== */
+
+/* 1. Scroll-Triggered Reveal Animations */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay modifiers for sequential card reveals */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+
+/* 2. Magnetic and Hover Scale Transition */
+.hover-lift {
+  transition: var(--transition-smooth);
+}
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* 3. Text Gradient Reveal Effect */
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 4. Pulsing Effect for CTA Buttons */
+@keyframes pulse-shadow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 82, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 82, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 82, 255, 0);
+  }
+}
+
+.btn-pulse {
+  animation: pulse-shadow 2s infinite;
+}
+
+/* 5. Custom Floating Dashboard Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float-ui {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* 6. SVG Path Drawing Transition */
+@keyframes draw-path {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw-path 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* 7. Breathing Icon Effect for WhatsApp */
+@keyframes breathe-whatsapp {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px 5px rgba(37, 211, 102, 0.2);
+  }
+}
+
+.whatsapp-breathe {
+  animation: breathe-whatsapp 3s ease-in-out infinite;
+}
