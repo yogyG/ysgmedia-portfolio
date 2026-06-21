@@ -22,7 +22,7 @@ async function initPage() {
 
     const path = window.location.pathname;
     let activePage = 'home';
-    
+
     if (path.includes('services')) activePage = 'services';
     if (path.includes('case-studies')) activePage = 'case studies';
     if (path.includes('industries')) activePage = 'industries';
@@ -33,7 +33,7 @@ async function initPage() {
     // Mount Header & Footer
     const headerMount = document.getElementById('header-mount');
     if (headerMount) headerMount.innerHTML = generateHeader(company, activePage);
-    
+
     const footerMount = document.getElementById('footer-mount');
     if (footerMount) footerMount.innerHTML = generateFooter(company, contact);
 
@@ -46,7 +46,7 @@ async function initPage() {
     if (activePage === 'case studies') {
       const grid = document.getElementById('page-cases-grid');
       if (grid) grid.innerHTML = caseStudies.map(cs => buildCaseStudyCard(cs)).join('');
-      
+
       const testGrid = document.getElementById('page-testimonials-grid');
       if (testGrid) testGrid.innerHTML = testimonials.map(t => buildTestimonialCard(t)).join('');
     }

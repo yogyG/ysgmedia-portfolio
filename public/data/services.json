@@ -1,0 +1,107 @@
+[
+  {
+    "id": "meta-ads",
+    "title": "Meta Ads (Facebook & Instagram)",
+    "description": "High-converting ad campaigns that generate high-quality leads, phone calls, and sales directly from social media.",
+    "icon": "♾️",
+    "ctaText": "Book Consultation",
+    "details": "We build end-to-end Meta ad funnels. From audience research and pixel optimization to creative design and daily bid management, we ensure your ad budget is spent efficiently to acquire real customers.",
+    "deliverables": [
+      "Target Audience Mapping & Lookalikes",
+      "Ad Creative Design & Copywriting",
+      "A/B Testing of Creatives & Headlines",
+      "Meta Pixel & Conversions API Setup",
+      "Weekly Optimization & Lead Quality Checks"
+    ]
+  },
+  {
+    "id": "google-ads",
+    "title": "Google & YouTube Ads",
+    "description": "Search, Display, Performance Max, and YouTube campaigns targeting users actively searching for your services.",
+    "icon": "🔍",
+    "ctaText": "Book Consultation",
+    "details": "Dominate Google search results when intent is highest. We research high-converting keywords and design laser-targeted Search and Video campaigns that put your brand in front of customers ready to buy.",
+    "deliverables": [
+      "In-Depth Keyword & Competitor Research",
+      "High-Intent Search Ads Setup",
+      "Performance Max & YouTube Ad Funnels",
+      "Negative Keyword List Management",
+      "Google Tag Manager & Conversion Tracking"
+    ]
+  },
+  {
+    "id": "social-media-management",
+    "title": "Social Media Management",
+    "description": "Build an active, professional presence that builds organic credibility, trust, and brand awareness.",
+    "icon": "📱",
+    "ctaText": "Book Consultation",
+    "details": "Keep your brand active and professional. We design custom content calendars, write engaging captions, and manage your online profiles so you can focus on running your business.",
+    "deliverables": [
+      "Custom Monthly Content Calendars",
+      "Profile Optimization & Branding",
+      "Engaging Caption Writing & Hashtag Strategy",
+      "Community Engagement & DM Management",
+      "Monthly Growth & Engagement Reports"
+    ]
+  },
+  {
+    "id": "content-creation",
+    "title": "Content Creation & Copywriting",
+    "description": "High-impact visual and written content, including video scripts, ad copies, and reels that stop the scroll.",
+    "icon": "🎬",
+    "ctaText": "Book Consultation",
+    "details": "Visuals speak louder than words. We write compelling, persuasive copies and design high-impact visuals that grab attention, increase click-through rates, and drive conversions.",
+    "deliverables": [
+      "Short-form Video Scripts (Reels/Shorts)",
+      "High-Converting Ad Copies",
+      "Professional Video Editing & Captions",
+      "Visual Asset Kits for Digital Channels",
+      "SEO-friendly Blog & Article Writing"
+    ]
+  },
+  {
+    "id": "creative-design",
+    "title": "Brand & Creative Design",
+    "description": "Premium graphic designs, banner art, logo systems, and visual guidelines that elevate your agency's authority.",
+    "icon": "🎨",
+    "ctaText": "Book Consultation",
+    "details": "A premium look commands premium pricing. We build cohesive visual brand guidelines, presentation decks, and marketing banners that make your business look like an industry leader.",
+    "deliverables": [
+      "Custom Logo Systems & Brand Guidelines",
+      "Social Media Banner & Grid Templates",
+      "Pitch Decks & Sales Presentation Assets",
+      "Print-ready Brochure & PDF Designs",
+      "Website Asset Styling & Custom Emojis"
+    ]
+  },
+  {
+    "id": "landing-pages",
+    "title": "Conversion-Optimized Landing Pages",
+    "description": "Custom, lightning-fast pages designed specifically to convert traffic into booked calls and leads.",
+    "icon": "⚡",
+    "ctaText": "Book Consultation",
+    "details": "Don't send paid traffic to a generic website. We design and build dedicated, high-speed landing pages tailored to a single offer, maximizing your return on ad spend.",
+    "deliverables": [
+      "Conversion-focused Wireframes & UX Layouts",
+      "Persuasive Lead-Capture Copywriting",
+      "Mobile-responsive Layout Design",
+      "Page Speed & Performance Optimization",
+      "WhatsApp & CRM Lead Form Integrations"
+    ]
+  },
+  {
+    "id": "analytics-tracking",
+    "title": "Analytics, Tracking & Dashboards",
+    "description": "Establish exact measurement of conversion rates, cost-per-lead, and attribution metrics.",
+    "icon": "📊",
+    "ctaText": "Book Consultation",
+    "details": "Make decisions based on data, not guesses. We set up professional Google Analytics 4 pipelines, custom event tracking, and intuitive live dashboards so you see exactly where your revenue comes from.",
+    "deliverables": [
+      "Google Analytics 4 (GA4) Integration",
+      "Google Tag Manager Custom Event Triggers",
+      "UTM Parameter Campaign Tracking",
+      "Interactive Google Looker Studio Dashboards",
+      "Monthly KPI Performance Audits"
+    ]
+  }
+]

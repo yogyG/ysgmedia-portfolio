@@ -11,7 +11,7 @@ function initHome() {
     // 2. Inject Header & Footer
     const headerMount = document.getElementById('header-mount');
     if (headerMount) headerMount.innerHTML = generateHeader(company, 'home');
-    
+
     const footerMount = document.getElementById('footer-mount');
     if (footerMount) footerMount.innerHTML = generateFooter(company, contact);
 
