@@ -55,6 +55,31 @@ function initHome() {
       testGrid.innerHTML = testimonials.map(t => buildTestimonialCard(t)).join('');
     }
 
+    // 7. Init Auto-scroll for mobile carousels
+    const carousels = document.querySelectorAll('.mobile-carousel');
+    carousels.forEach(carousel => {
+      let isHovered = false;
+      carousel.addEventListener('mouseenter', () => isHovered = true);
+      carousel.addEventListener('mouseleave', () => isHovered = false);
+      carousel.addEventListener('touchstart', () => isHovered = true, {passive: true});
+      carousel.addEventListener('touchend', () => {
+        setTimeout(() => isHovered = false, 2000);
+      });
+
+      setInterval(() => {
+        if (!isHovered && window.innerWidth <= 768) {
+          const cardWidth = carousel.children[0]?.clientWidth || 0;
+          if (cardWidth === 0) return;
+          
+          if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 10) {
+             carousel.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+             carousel.scrollBy({ left: cardWidth + 16, behavior: 'smooth' }); // add 16px gap
+          }
+        }
+      }, 3000);
+    });
+
   } catch (error) {
     console.error('Error loading YSG Media data:', error);
   }
