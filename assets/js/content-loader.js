@@ -1,19 +1,36 @@
 // Components logic for YSG Media
 
 export function buildServiceCard(service) {
+  const deliverablesList = service.deliverables ? service.deliverables.map(item => `
+    <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 8px;">
+      <span style="color: var(--accent-primary); font-weight: bold; font-size: 1.1rem; line-height: 1;">✓</span>
+      <span>${item}</span>
+    </li>
+  `).join('') : '';
+
   return `
-    <div class="card-glass hover-lift reveal-on-scroll delay-100" style="padding: var(--spacing-md); border-radius: var(--border-radius-md); background: var(--bg-card); border: 1px solid var(--border-muted); margin-bottom: var(--spacing-sm);">
-      <div style="color: var(--accent-primary); font-size: 2rem; margin-bottom: var(--spacing-xs);">
-        <!-- Icon Placeholder -->
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="10"></circle>
-          <path d="M12 16v-4"></path>
-          <path d="M12 8h.01"></path>
-        </svg>
+    <div id="${service.id}" class="card-glass hover-lift reveal-on-scroll" style="padding: var(--spacing-md); border-radius: var(--border-radius-md); background: var(--bg-card); border: 1px solid var(--border-muted); display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+      <div>
+        <div style="font-size: 2.5rem; margin-bottom: var(--spacing-xs); line-height: 1;">
+          ${service.icon || '🎯'}
+        </div>
+        <h3 style="font-size: 1.5rem; margin-bottom: var(--spacing-xs); font-family: var(--font-heading); color: var(--text-primary);">${service.title}</h3>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; font-weight: 500; margin-bottom: var(--spacing-sm); line-height: 1.5;">${service.description}</p>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: var(--spacing-md); line-height: 1.6; border-top: 1px solid var(--border-muted); padding-top: var(--spacing-sm);">${service.details}</p>
+        
+        <div style="margin-bottom: var(--spacing-md);">
+          <h4 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-primary); margin-bottom: var(--spacing-xs); font-weight: 700;">What's Included:</h4>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            ${deliverablesList}
+          </ul>
+        </div>
       </div>
-      <h3 style="margin-bottom: var(--spacing-xs);">${service.title}</h3>
-      <p style="color: var(--text-secondary); margin-bottom: var(--spacing-sm);">${service.description}</p>
-      <a href="/services.html#${service.id}" style="color: var(--accent-primary); font-weight: 600; font-size: 0.9rem;">${service.ctaText} &rarr;</a>
+      
+      <div style="padding-top: var(--spacing-sm); border-top: 1px solid var(--border-muted); margin-top: auto;">
+        <a href="contact.html?service=${service.id}" class="btn-pulse" style="display: block; text-align: center; padding: 0.8rem 1.5rem; background: var(--bg-secondary); color: white; border-radius: var(--border-radius-sm); font-weight: 600; font-size: 0.95rem; transition: var(--transition-smooth);">
+          ${service.ctaText} &rarr;
+        </a>
+      </div>
     </div>
   `;
 }
