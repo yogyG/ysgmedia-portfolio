@@ -29,7 +29,7 @@ const headerBase = `    <div id="header-mount">
           <a href="contact.html" class="__CONTACT_ACTIVE__">Contact</a>
           <div class="mobile-actions">
             <a href="contact.html" class="btn-primary" style="font-size: 0.9rem; text-decoration: none;">Book Free Consultation</a>
-            <a href="https://wa.me/message/TES4XUVEGSGBC1" target="_blank" class="wa-link" style="padding: 0.8rem 1.2rem; background: var(--accent-whatsapp); color: white; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none;">
+            <a href="https://wa.me/message/TES4XUVEGSGBC1" target="_blank" class="btn-whatsapp">
               WhatsApp Us
             </a>
           </div>
@@ -37,7 +37,7 @@ const headerBase = `    <div id="header-mount">
 
         <div class="header-actions">
           <a href="contact.html" class="btn-secondary" style="padding: 0.6rem 1.2rem; background: var(--bg-secondary); color: white; border-radius: var(--border-radius-sm); font-weight: 600; text-decoration: none;">Book Free Consultation</a>
-          <a href="https://wa.me/message/TES4XUVEGSGBC1" target="_blank" class="wa-link" style="padding: 0.6rem 1rem; background: var(--accent-whatsapp); color: white; border-radius: var(--border-radius-sm); font-weight: 600; display: flex; align-items: center; gap: 8px; text-decoration: none;">
+          <a href="https://wa.me/message/TES4XUVEGSGBC1" target="_blank" class="btn-whatsapp">
              WhatsApp Us
           </a>
         </div>
@@ -126,5 +126,6 @@ for (const page of pages) {
 }
 
 console.log('Successfully injected headers and footers.');
+
 
 
