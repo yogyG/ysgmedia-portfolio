@@ -67,7 +67,7 @@ export function generateHeader(companyData, activePage = 'home') {
     return `<a href="${link.url}" class="${isActive ? 'active' : ''}">${link.name}</a>`;
   }).join('');
 
-  const waUrl = `https://wa.me/${companyData.whatsappNumber.replace(/\D/g, '')}?text=${encodeURIComponent(companyData.whatsappWelcomeMessage)}`;
+  const waUrl = 'https://wa.me/message/TES4XUVEGSGBC1';
 
   return `
     <header class="global-header">
@@ -140,3 +140,4 @@ export function generateFooter(companyData, contactData) {
     </footer>
   `;
 }
+

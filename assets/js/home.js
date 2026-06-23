@@ -20,7 +20,7 @@ function initHome() {
     if (taglineObj) taglineObj.textContent = company.tagline;
 
     // Build WhatsApp Links
-    const waUrl = `https://wa.me/${company.whatsappNumber.replace(/\\D/g, '')}?text=${encodeURIComponent(company.whatsappWelcomeMessage)}`;
+    const waUrl = 'https://wa.me/message/TES4XUVEGSGBC1';
     const heroWa = document.getElementById('hero-whatsapp');
     const footerWa = document.getElementById('footer-whatsapp');
     if (heroWa) heroWa.href = waUrl;
@@ -86,3 +86,4 @@ function initHome() {
 }
 
 document.addEventListener('DOMContentLoaded', initHome);
+

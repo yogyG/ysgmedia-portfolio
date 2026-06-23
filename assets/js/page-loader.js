@@ -54,7 +54,7 @@ async function initPage() {
     }
 
     // Bind WhatsApp generic URLs
-    const waUrl = `https://wa.me/${company.whatsappNumber.replace(/\\D/g, '')}?text=${encodeURIComponent("Hi YSG Media, I want to book a consultation.")}`;
+    const waUrl = 'https://wa.me/message/TES4XUVEGSGBC1';
     document.querySelectorAll('.wa-link').forEach(link => {
       link.href = waUrl;
     });
@@ -65,3 +65,4 @@ async function initPage() {
 }
 
 document.addEventListener('DOMContentLoaded', initPage);
+
