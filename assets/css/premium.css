@@ -1,0 +1,156 @@
+/* premium.css - Custom Cursor, Preloader, and Global Animations */
+
+/* --------------------
+   Preloader 
+-------------------- */
+#premium-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #050505;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.preloader-content {
+  text-align: center;
+}
+
+.preloader-logo {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 2px;
+  opacity: 0; /* Animated via GSAP */
+  transform: translateY(20px);
+}
+
+.preloader-progress {
+  margin-top: 1rem;
+  font-family: var(--font-mono, monospace);
+  color: var(--text-secondary);
+  font-size: 1rem;
+  opacity: 0; /* Animated via GSAP */
+}
+
+/* --------------------
+   Custom Cursor 
+-------------------- */
+body {
+  cursor: none; /* Hide default cursor */
+}
+
+a, button, input, textarea, .magnetic-btn, .hover-target {
+  cursor: none;
+}
+
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-primary);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 100000;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+  mix-blend-mode: exclusion;
+}
+
+#custom-cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(139, 92, 246, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, background-color 0.3s, border-color 0.3s;
+}
+
+/* Cursor Hover States */
+body.cursor-hover #custom-cursor {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(139, 92, 246, 0.1);
+  backdrop-filter: blur(2px);
+}
+
+body.cursor-hover #custom-cursor-follower {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+body.cursor-view-project #custom-cursor::after {
+  content: "VIEW";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+}
+
+body.cursor-view-project #custom-cursor {
+  width: 80px;
+  height: 80px;
+  background-color: var(--accent-primary);
+  mix-blend-mode: normal;
+}
+
+/* --------------------
+   Lenis Smooth Scroll
+-------------------- */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Trust Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-item {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  padding: 0 2rem;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.marquee-item:hover {
+  color: white;
+  text-shadow: 0 0 15px rgba(139, 92, 246, 0.8);
+}
