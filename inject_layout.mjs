@@ -36,7 +36,7 @@ const headerBase = `    <div id="header-mount">
         </nav>
 
         <div class="header-actions">
-          <a href="contact.html" class="btn-secondary" style="padding: 0.6rem 1.2rem; background: var(--bg-secondary); color: white; border-radius: var(--border-radius-sm); font-weight: 600; text-decoration: none;">Book Free Consultation</a>
+          <a href="contact.html" class="btn-primary">Book Free Consultation</a>
           <a href="https://wa.me/message/TES4XUVEGSGBC1" target="_blank" class="btn-whatsapp">
              WhatsApp Us
           </a>
@@ -126,6 +126,7 @@ for (const page of pages) {
 }
 
 console.log('Successfully injected headers and footers.');
+
 
 
 
