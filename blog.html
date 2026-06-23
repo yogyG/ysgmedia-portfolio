@@ -8,25 +8,295 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   </head>
   <body>
-    <div id="header-mount"></div>
+    <div id="header-mount">
+      <header class="global-header">
+        <div class="logo">
+          <a href="index.html" style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; color: var(--text-primary); text-decoration: none;">YSG<span style="color: var(--accent-primary);">MEDIA</span></a>
+        </div>
+        <nav class="nav-menu" id="nav-menu">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="case-studies.html">Case Studies</a>
+          <a href="blog.html" class="active">Blog</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <div class="mobile-actions">
+            <a href="contact.html" class="btn-primary" style="font-size: 0.9rem; text-decoration: none;">Book Free Consultation</a>
+            <a href="https://wa.me/919096009125" target="_blank" class="wa-link" style="padding: 0.8rem 1.2rem; background: var(--accent-whatsapp); color: white; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none;">WhatsApp Us</a>
+          </div>
+        </nav>
+        <div class="header-actions">
+          <a href="contact.html" class="btn-secondary" style="padding: 0.6rem 1.2rem; background: var(--bg-secondary); color: white; border-radius: var(--border-radius-sm); font-weight: 600; text-decoration: none;">Book Free Consultation</a>
+          <a href="https://wa.me/919096009125" target="_blank" class="wa-link" style="padding: 0.6rem 1rem; background: var(--accent-whatsapp); color: white; border-radius: var(--border-radius-sm); font-weight: 600; display: flex; align-items: center; gap: 8px; text-decoration: none;">WhatsApp Us</a>
+        </div>
+        <button class="hamburger" id="mobile-hamburger" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </header>
+    </div>
 
     <main>
-      <section style="background: var(--bg-secondary); color: white; padding: var(--spacing-xl) var(--spacing-lg); text-align: center;">
-        <h1 style="font-size: 3.5rem; margin-bottom: var(--spacing-sm); color: white;">Marketing Insights</h1>
-        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto; font-size: 1.1rem;">Latest strategies, guides, and updates from the YSG Media team.</p>
+      <!-- PAGE HEADER -->
+      <section style="background: var(--bg-secondary); color: white; padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md) var(--spacing-md); text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <div style="display: inline-block; padding: 6px 16px; background: rgba(168, 85, 247, 0.15); color: var(--accent-primary); border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: var(--spacing-sm);">YSG Media Blog</div>
+        <h1 style="font-size: 3.5rem; margin-bottom: var(--spacing-sm); color: white; line-height: 1.2;">Digital Marketing Insights & <br>Growth Strategies</h1>
+        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto; font-size: 1.15rem; line-height: 1.6;">Expert guides, actionable marketing strategies, and business growth insights from YSG Media.</p>
+        
+        <!-- Search & Filter Bar -->
+        <div style="max-width: 800px; margin: var(--spacing-lg) auto 0 auto;">
+          <div style="display: flex; gap: 8px; background: rgba(255,255,255,0.05); padding: 8px; border-radius: var(--border-radius-sm); border: 1px solid rgba(255,255,255,0.1);">
+            <input type="text" id="blog-search" placeholder="Search for articles, guides, or topics..." style="flex-grow: 1; background: transparent; border: none; color: white; padding: 12px 16px; outline: none; font-family: var(--font-body); font-size: 1rem;">
+            <button id="blog-search-btn" class="btn-primary" style="padding: 10px 24px; border-radius: var(--border-radius-sm); border: none; cursor: pointer; font-weight: 600;">Search</button>
+          </div>
+          
+          <div id="blog-categories" style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: var(--spacing-md);">
+            <button class="category-btn active" data-category="All" style="background: var(--accent-primary); color: white; border: none; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; cursor: pointer;">All</button>
+            <button class="category-btn" data-category="Meta Ads" style="background: rgba(255,255,255,0.05); color: var(--text-secondary); border: 1px solid rgba(255,255,255,0.1); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; cursor: pointer; transition: all 0.2s;">Meta Ads</button>
+            <button class="category-btn" data-category="Google Ads" style="background: rgba(255,255,255,0.05); color: var(--text-secondary); border: 1px solid rgba(255,255,255,0.1); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; cursor: pointer; transition: all 0.2s;">Google Ads</button>
+            <button class="category-btn" data-category="Lead Generation" style="background: rgba(255,255,255,0.05); color: var(--text-secondary); border: 1px solid rgba(255,255,255,0.1); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; cursor: pointer; transition: all 0.2s;">Lead Generation</button>
+            <button class="category-btn" data-category="Local SEO" style="background: rgba(255,255,255,0.05); color: var(--text-secondary); border: 1px solid rgba(255,255,255,0.1); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; cursor: pointer; transition: all 0.2s;">Local SEO</button>
+            <button class="category-btn" data-category="Social Media Marketing" style="background: rgba(255,255,255,0.05); color: var(--text-secondary); border: 1px solid rgba(255,255,255,0.1); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; cursor: pointer; transition: all 0.2s;">Social Media Marketing</button>
+            <button class="category-btn" data-category="Business Growth" style="background: rgba(255,255,255,0.05); color: var(--text-secondary); border: 1px solid rgba(255,255,255,0.1); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; cursor: pointer; transition: all 0.2s;">Business Growth</button>
+          </div>
+        </div>
       </section>
 
-      <section style="padding: var(--spacing-xl) var(--spacing-lg); max-width: 1400px; margin: 0 auto; text-align: center;">
-        <h2 style="font-size: 2rem; color: var(--text-secondary);">Coming Soon</h2>
-        <p style="color: var(--text-secondary);">We are finalizing our blog configuration engine.</p>
+      <!-- MAIN CONTENT AREA -->
+      <section style="padding: var(--spacing-lg) var(--spacing-md); max-width: 1400px; margin: 0 auto;">
+        
+        <!-- FEATURED BLOG -->
+        <div id="featured-section" style="margin-bottom: var(--spacing-lg);">
+          <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-md); color: var(--text-primary); border-left: 4px solid var(--accent-primary); padding-left: 12px;">Featured Article</h2>
+          
+          <a href="blog/meta-ads-budget-small-business-2026.html" style="text-decoration: none; color: inherit; display: block;">
+            <div class="card-glass hover-lift" style="display: flex; flex-wrap: wrap; border-radius: var(--border-radius-md); overflow: hidden; background: var(--bg-card); border: 1px solid var(--border-muted);">
+              <div style="flex: 1 1 500px; min-height: 350px; background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(16, 185, 129, 0.1) 100%); display: flex; align-items: center; justify-content: center; border-right: 1px solid var(--border-muted);">
+                <!-- Placeholder Image -->
+                <div style="font-size: 5rem; filter: drop-shadow(0 0 20px rgba(168,85,247,0.4));">📈</div>
+              </div>
+              <div style="flex: 1 1 400px; padding: var(--spacing-lg); display: flex; flex-direction: column; justify-content: center;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--spacing-sm);">
+                  <span style="padding: 4px 12px; background: rgba(168, 85, 247, 0.15); color: var(--accent-primary); border-radius: 20px; font-size: 0.8rem; font-weight: 600;">Meta Ads</span>
+                  <span style="color: var(--text-secondary); font-size: 0.85rem; display: flex; align-items: center; gap: 4px;">⏱️ 7 min read</span>
+                  <span style="color: var(--text-secondary); font-size: 0.85rem;">📅 Jun 23, 2026</span>
+                </div>
+                <h3 style="font-size: 2.2rem; margin-bottom: var(--spacing-sm); line-height: 1.2; color: white;">How Much Should Small Businesses Spend on Meta Ads in 2026?</h3>
+                <p style="color: var(--text-secondary); font-size: 1.05rem; margin-bottom: var(--spacing-md); line-height: 1.6;">Learn how much your business should really be spending on Facebook and Instagram Ads. We break down budget planning, CPL calculations, and scaling strategies for real ROI.</p>
+                <div style="margin-top: auto;">
+                  <span style="display: inline-flex; align-items: center; gap: 8px; color: var(--accent-primary); font-weight: 600; font-size: 0.95rem;">Read Full Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-lg);">
+          <!-- LATEST ARTICLES GRID -->
+          <div style="flex: 1 1 800px;">
+            <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-md); color: var(--text-primary); border-left: 4px solid var(--accent-primary); padding-left: 12px;">Latest Articles</h2>
+            
+            <div id="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: var(--spacing-lg);">
+              
+              <!-- Blog 1: Meta Ads (was only featured before) -->
+              <a href="blog/meta-ads-budget-small-business-2026.html" class="blog-card" data-category="Meta Ads" style="text-decoration: none; color: inherit;">
+                <div class="card-glass hover-lift" style="display: flex; flex-direction: column; height: 100%; border-radius: var(--border-radius-md); overflow: hidden; background: var(--bg-card); border: 1px solid var(--border-muted);">
+                  <div style="height: 220px; background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(16, 185, 129, 0.1) 100%); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border-muted);">
+                    <div style="font-size: 4rem; filter: drop-shadow(0 0 15px rgba(168,85,247,0.3));">📈</div>
+                  </div>
+                  <div style="padding: var(--spacing-md); flex-grow: 1; display: flex; flex-direction: column;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--spacing-sm);">
+                      <span style="padding: 4px 10px; background: rgba(168, 85, 247, 0.15); color: var(--accent-primary); border-radius: 20px; font-size: 0.75rem; font-weight: 600;">Meta Ads</span>
+                      <span style="color: var(--text-secondary); font-size: 0.8rem;">⏱️ 7 min read</span>
+                    </div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: var(--spacing-xs); line-height: 1.3; color: white;">How Much Should Small Businesses Spend on Meta Ads in 2026?</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: var(--spacing-md); line-height: 1.5; flex-grow: 1;">Learn how much your business should really be spending on Facebook and Instagram Ads to get real ROI.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-muted); padding-top: 12px; margin-top: auto;">
+                      <span style="color: var(--text-secondary); font-size: 0.8rem;">📅 Jun 23, 2026</span>
+                      <span style="color: var(--accent-primary); font-weight: 600; font-size: 0.9rem;">Read More →</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Blog 2 -->
+              <a href="blog/google-ads-vs-meta-ads.html" class="blog-card" data-category="Google Ads" style="text-decoration: none; color: inherit;">
+                <div class="card-glass hover-lift" style="display: flex; flex-direction: column; height: 100%; border-radius: var(--border-radius-md); overflow: hidden; background: var(--bg-card); border: 1px solid var(--border-muted);">
+                  <div style="height: 220px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(236, 72, 153, 0.1) 100%); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border-muted);">
+                    <div style="font-size: 4rem; filter: drop-shadow(0 0 15px rgba(59,130,246,0.3));">🔍</div>
+                  </div>
+                  <div style="padding: var(--spacing-md); flex-grow: 1; display: flex; flex-direction: column;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--spacing-sm);">
+                      <span style="padding: 4px 10px; background: rgba(59, 130, 246, 0.15); color: #60a5fa; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">Google Ads</span>
+                      <span style="color: var(--text-secondary); font-size: 0.8rem;">⏱️ 6 min read</span>
+                    </div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: var(--spacing-xs); line-height: 1.3; color: white;">Google Ads vs Meta Ads: Which Platform Is Better?</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: var(--spacing-md); line-height: 1.5; flex-grow: 1;">Compare Google Ads and Meta Ads to find the best advertising platform for your specific business goals and budget.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-muted); padding-top: 12px; margin-top: auto;">
+                      <span style="color: var(--text-secondary); font-size: 0.8rem;">📅 Jun 18, 2026</span>
+                      <span style="color: var(--accent-primary); font-weight: 600; font-size: 0.9rem;">Read More →</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Blog 3 -->
+              <a href="blog/instagram-marketing-for-boutiques.html" class="blog-card" data-category="Social Media Marketing" style="text-decoration: none; color: inherit;">
+                <div class="card-glass hover-lift" style="display: flex; flex-direction: column; height: 100%; border-radius: var(--border-radius-md); overflow: hidden; background: var(--bg-card); border: 1px solid var(--border-muted);">
+                  <div style="height: 220px; background: linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(245, 158, 11, 0.1) 100%); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border-muted);">
+                    <div style="font-size: 4rem; filter: drop-shadow(0 0 15px rgba(236,72,153,0.3));">👗</div>
+                  </div>
+                  <div style="padding: var(--spacing-md); flex-grow: 1; display: flex; flex-direction: column;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--spacing-sm);">
+                      <span style="padding: 4px 10px; background: rgba(236, 72, 153, 0.15); color: #f472b6; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">Social Media Marketing</span>
+                      <span style="color: var(--text-secondary); font-size: 0.8rem;">⏱️ 8 min read</span>
+                    </div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: var(--spacing-xs); line-height: 1.3; color: white;">Instagram Marketing for Boutique Owners: Complete Growth Guide</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: var(--spacing-md); line-height: 1.5; flex-grow: 1;">Learn how boutique owners can use Instagram marketing, reels, and Meta Ads to dramatically increase sales and customer inquiries.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-muted); padding-top: 12px; margin-top: auto;">
+                      <span style="color: var(--text-secondary); font-size: 0.8rem;">📅 Jun 12, 2026</span>
+                      <span style="color: var(--accent-primary); font-weight: 600; font-size: 0.9rem;">Read More →</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Blog 4 -->
+              <a href="blog/b2b-lead-generation-for-manufacturers.html" class="blog-card" data-category="Lead Generation" style="text-decoration: none; color: inherit;">
+                <div class="card-glass hover-lift" style="display: flex; flex-direction: column; height: 100%; border-radius: var(--border-radius-md); overflow: hidden; background: var(--bg-card); border: 1px solid var(--border-muted);">
+                  <div style="height: 220px; background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(14, 165, 233, 0.1) 100%); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border-muted);">
+                    <div style="font-size: 4rem; filter: drop-shadow(0 0 15px rgba(16,185,129,0.3));">🏭</div>
+                  </div>
+                  <div style="padding: var(--spacing-md); flex-grow: 1; display: flex; flex-direction: column;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--spacing-sm);">
+                      <span style="padding: 4px 10px; background: rgba(16, 185, 129, 0.15); color: #34d399; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">Lead Generation</span>
+                      <span style="color: var(--text-secondary); font-size: 0.8rem;">⏱️ 9 min read</span>
+                    </div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: var(--spacing-xs); line-height: 1.3; color: white;">How Manufacturers Can Generate B2B Leads Using Digital Marketing</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: var(--spacing-md); line-height: 1.5; flex-grow: 1;">Generate more wholesalers, distributors, exporters, and bulk buyers through highly targeted digital marketing funnels.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-muted); padding-top: 12px; margin-top: auto;">
+                      <span style="color: var(--text-secondary); font-size: 0.8rem;">📅 Jun 05, 2026</span>
+                      <span style="color: var(--accent-primary); font-weight: 600; font-size: 0.9rem;">Read More →</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Blog 5 -->
+              <a href="blog/google-business-profile-guide.html" class="blog-card" data-category="Local SEO" style="text-decoration: none; color: inherit;">
+                <div class="card-glass hover-lift" style="display: flex; flex-direction: column; height: 100%; border-radius: var(--border-radius-md); overflow: hidden; background: var(--bg-card); border: 1px solid var(--border-muted);">
+                  <div style="height: 220px; background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(239, 68, 68, 0.1) 100%); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border-muted);">
+                    <div style="font-size: 4rem; filter: drop-shadow(0 0 15px rgba(245,158,11,0.3));">📍</div>
+                  </div>
+                  <div style="padding: var(--spacing-md); flex-grow: 1; display: flex; flex-direction: column;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--spacing-sm);">
+                      <span style="padding: 4px 10px; background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">Local SEO</span>
+                      <span style="color: var(--text-secondary); font-size: 0.8rem;">⏱️ 5 min read</span>
+                    </div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: var(--spacing-xs); line-height: 1.3; color: white;">Why Every Business Needs a Google Business Profile in 2026</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: var(--spacing-md); line-height: 1.5; flex-grow: 1;">Learn how Google Business Profile can help your business rank locally, generate leads instantly, and increase local footfall.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-muted); padding-top: 12px; margin-top: auto;">
+                      <span style="color: var(--text-secondary); font-size: 0.8rem;">📅 May 28, 2026</span>
+                      <span style="color: var(--accent-primary); font-weight: 600; font-size: 0.9rem;">Read More →</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+            </div>
+            
+            <div id="no-results" style="display: none; padding: var(--spacing-lg); text-align: center; background: rgba(255,255,255,0.02); border-radius: var(--border-radius-md); border: 1px dashed rgba(255,255,255,0.1); margin-top: var(--spacing-md);">
+              <div style="font-size: 3rem; margin-bottom: var(--spacing-sm);">🔍</div>
+              <h3 style="font-size: 1.5rem; margin-bottom: 8px;">No articles found</h3>
+              <p style="color: var(--text-secondary);">Try adjusting your search term or selecting a different category.</p>
+            </div>
+            
+          </div>
+
+          <!-- SIDEBAR -->
+          <div style="flex: 1 1 300px; max-width: 400px;">
+            <!-- Newsletter -->
+            <div class="card-glass" style="padding: var(--spacing-md); border-radius: var(--border-radius-md); border: 1px solid var(--border-muted); background: var(--bg-card); margin-bottom: var(--spacing-lg);">
+              <div style="font-size: 2.5rem; margin-bottom: 8px;">💌</div>
+              <h3 style="font-size: 1.4rem; margin-bottom: 8px; color: white;">Join Our Newsletter</h3>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: var(--spacing-md);">Get exclusive marketing strategies and growth tips delivered directly to your inbox every week.</p>
+              <form onsubmit="event.preventDefault(); alert('Thanks for subscribing!');" style="display: flex; flex-direction: column; gap: 8px;">
+                <input type="email" placeholder="Your email address" required style="width: 100%; padding: 12px; border-radius: var(--border-radius-sm); border: 1px solid var(--border-muted); background: rgba(255,255,255,0.05); color: white; outline: none; font-family: var(--font-body);">
+                <button type="submit" class="btn-primary" style="width: 100%; padding: 12px; border-radius: var(--border-radius-sm); border: none; font-weight: 600; cursor: pointer;">Subscribe</button>
+              </form>
+            </div>
+            
+            <!-- Popular Articles -->
+            <div class="card-glass" style="padding: var(--spacing-md); border-radius: var(--border-radius-md); border: 1px solid var(--border-muted); background: var(--bg-card); margin-bottom: var(--spacing-lg);">
+              <h3 style="font-size: 1.2rem; margin-bottom: var(--spacing-md); color: white; border-bottom: 1px solid var(--border-muted); padding-bottom: 12px;">🔥 Popular Reads</h3>
+              
+              <div style="display: flex; flex-direction: column; gap: 16px;">
+                <a href="blog/meta-ads-budget-small-business-2026.html" style="text-decoration: none; display: grid; grid-template-columns: 60px 1fr; gap: 12px; align-items: center;" class="hover-lift">
+                  <div style="width: 60px; height: 60px; border-radius: 8px; background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(16, 185, 129, 0.1) 100%); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">📈</div>
+                  <div>
+                    <h4 style="color: white; font-size: 0.95rem; margin-bottom: 4px; line-height: 1.3;">Meta Ads Budget for Small Businesses</h4>
+                    <span style="color: var(--text-secondary); font-size: 0.8rem;">Meta Ads</span>
+                  </div>
+                </a>
+                
+                <a href="blog/google-ads-vs-meta-ads.html" style="text-decoration: none; display: grid; grid-template-columns: 60px 1fr; gap: 12px; align-items: center;" class="hover-lift">
+                  <div style="width: 60px; height: 60px; border-radius: 8px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(236, 72, 153, 0.1) 100%); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">🔍</div>
+                  <div>
+                    <h4 style="color: white; font-size: 0.95rem; margin-bottom: 4px; line-height: 1.3;">Google Ads vs Meta Ads</h4>
+                    <span style="color: var(--text-secondary); font-size: 0.8rem;">Google Ads</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LEAD GEN CTA BANNER -->
+      <section style="background: var(--bg-secondary); padding: var(--spacing-lg) var(--spacing-md); text-align: center; color: white; border-top: 1px solid var(--border-muted);">
+        <div style="max-width: 800px; margin: 0 auto;">
+          <h2 style="font-size: 2.8rem; margin-bottom: var(--spacing-sm); color: white;">Need More Leads?</h2>
+          <p style="font-size: 1.15rem; margin-bottom: var(--spacing-lg); color: var(--text-secondary);">YSG Media helps businesses generate qualified leads through Meta Ads, Google Ads, and performance marketing strategies.</p>
+          <div style="display: flex; gap: var(--spacing-sm); justify-content: center; flex-wrap: wrap;">
+            <a href="contact.html" class="btn-primary btn-pulse" style="padding: 1rem 2.5rem;">Book Free Consultation</a>
+            <a href="contact.html" class="btn-outline" style="padding: 1rem 2.5rem;">Get Free Marketing Audit</a>
+          </div>
+        </div>
       </section>
     </main>
 
-    <div id="footer-mount"></div>
+    <div id="footer-mount">
+      <footer style="background-color: var(--bg-secondary); color: var(--text-light); padding: var(--spacing-lg); margin-top: var(--spacing-lg);">
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg);">
+          <div>
+            <h2 style="color: white; margin-bottom: var(--spacing-sm);">YSG<span style="color: var(--accent-primary);">MEDIA</span></h2>
+            <p style="color: var(--text-secondary); margin-bottom: var(--spacing-sm);">We help businesses across India grow with performance marketing, social media management & data-driven strategies.</p>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">&copy; 2026 YSG Media. All Rights Reserved.</p>
+          </div>
+          <div>
+            <h3 style="color: white; margin-bottom: var(--spacing-sm);">Quick Links</h3>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 0.5rem;"><a href="index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a></li>
+              <li style="margin-bottom: 0.5rem;"><a href="services.html" style="color: var(--text-secondary); text-decoration: none;">Services</a></li>
+              <li style="margin-bottom: 0.5rem;"><a href="case-studies.html" style="color: var(--text-secondary); text-decoration: none;">Case Studies</a></li>
+              <li style="margin-bottom: 0.5rem;"><a href="about.html" style="color: var(--text-secondary); text-decoration: none;">About</a></li>
+              <li style="margin-bottom: 0.5rem;"><a href="contact.html" style="color: var(--text-secondary); text-decoration: none;">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="color: white; margin-bottom: var(--spacing-sm);">Contact Us</h3>
+            <p style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px; color: var(--text-secondary);">+91 90960 09125</p>
+            <p style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px; color: var(--text-secondary);">ysgdigitalmedia@gmail.com</p>
+            <p style="display: flex; align-items: flex-start; gap: 8px; color: var(--text-secondary);">Meera Nagar, Wardha, India</p>
+          </div>
+        </div>
+      </footer>
+    </div>
 
     <script type="module" src="assets/js/page-loader.js"></script>
     <script type="module" src="assets/js/animation-engine.js"></script>
+    <script type="module" src="assets/js/blog-engine.js"></script>
   </body>
 </html>

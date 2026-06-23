@@ -39,16 +39,18 @@ async function initPage() {
 
     // Populate Page Specific Grids
     if (activePage === 'services') {
-      const grid = document.getElementById('page-services-grid');
-      if (grid) grid.innerHTML = services.map(s => buildServiceCard(s)).join('');
+      // The services grid is now hardcoded in HTML for immediate rendering and better SEO
+      // const grid = document.getElementById('page-services-grid');
+      // if (grid) grid.innerHTML = services.map(s => buildServiceCard(s)).join('');
     }
 
     if (activePage === 'case studies') {
-      const grid = document.getElementById('page-cases-grid');
-      if (grid) grid.innerHTML = caseStudies.map(cs => buildCaseStudyCard(cs)).join('');
+      // The case studies grid is now hardcoded in HTML for immediate rendering and better SEO
+      // const grid = document.getElementById('page-cases-grid');
+      // if (grid) grid.innerHTML = caseStudies.map(cs => buildCaseStudyCard(cs)).join('');
 
-      const testGrid = document.getElementById('page-testimonials-grid');
-      if (testGrid) testGrid.innerHTML = testimonials.map(t => buildTestimonialCard(t)).join('');
+      // const testGrid = document.getElementById('page-testimonials-grid');
+      // if (testGrid) testGrid.innerHTML = testimonials.map(t => buildTestimonialCard(t)).join('');
     }
 
     // Bind WhatsApp generic URLs

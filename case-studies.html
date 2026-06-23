@@ -8,33 +8,338 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   </head>
   <body>
-    <div id="header-mount"></div>
+    <div id="header-mount">
+      <header class="global-header">
+        <div class="logo">
+          <a href="index.html" style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; color: var(--text-primary); text-decoration: none;">YSG<span style="color: var(--accent-primary);">MEDIA</span></a>
+        </div>
+        <nav class="nav-menu" id="nav-menu">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="case-studies.html" class="active">Case Studies</a>
+          <a href="blog.html">Blog</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <div class="mobile-actions">
+            <a href="contact.html" class="btn-primary" style="font-size: 0.9rem; text-decoration: none;">Book Free Consultation</a>
+            <a href="https://wa.me/919096009125" target="_blank" class="wa-link" style="padding: 0.8rem 1.2rem; background: var(--accent-whatsapp); color: white; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none;">WhatsApp Us</a>
+          </div>
+        </nav>
+        <div class="header-actions">
+          <a href="contact.html" class="btn-secondary" style="padding: 0.6rem 1.2rem; background: var(--bg-secondary); color: white; border-radius: var(--border-radius-sm); font-weight: 600; text-decoration: none;">Book Free Consultation</a>
+          <a href="https://wa.me/919096009125" target="_blank" class="wa-link" style="padding: 0.6rem 1rem; background: var(--accent-whatsapp); color: white; border-radius: var(--border-radius-sm); font-weight: 600; display: flex; align-items: center; gap: 8px; text-decoration: none;">WhatsApp Us</a>
+        </div>
+        <button class="hamburger" id="mobile-hamburger" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </header>
+    </div>
 
     <main>
-      <section style="background: var(--bg-secondary); color: white; padding: var(--spacing-xl) var(--spacing-lg); text-align: center;">
-        <h1 style="font-size: 3.5rem; margin-bottom: var(--spacing-sm); color: white;">Results That Matter</h1>
-        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto; font-size: 1.1rem;">How we've helped businesses achieve massive ROI through data-driven campaigns.</p>
+      <!-- PAGE HEADER -->
+      <section style="background: var(--bg-secondary); color: white; padding: var(--spacing-lg) var(--spacing-md); text-align: center;">
+        <h1 style="font-size: 3.5rem; margin-bottom: var(--spacing-sm); color: white;">Case Studies</h1>
+        <p style="font-size: 1.25rem; font-weight: 500; color: var(--accent-primary); max-width: 800px; margin: 0 auto var(--spacing-sm) auto; line-height: 1.4;">See how YSG Media helps businesses generate leads, increase sales, and achieve measurable growth through data-driven marketing strategies.</p>
+        <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto; font-size: 1.1rem; line-height: 1.6;">Every business is different, but the goal remains the same: generate more leads, increase revenue, and create predictable growth. Explore how we've helped businesses across multiple industries achieve real results.</p>
       </section>
 
-      <section style="padding: var(--spacing-xl) var(--spacing-lg); max-width: 1400px; margin: 0 auto;">
-        <div id="page-cases-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: var(--spacing-lg);">
-          <!-- Injected via JS -->
+      <!-- CASE STUDIES GRID -->
+      <section style="padding: var(--spacing-lg) var(--spacing-md); max-width: 1400px; margin: 0 auto;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: var(--spacing-lg);">
+          
+          <!-- Case Study 1: Fashion & Boutique -->
+          <div class="card-glass hover-lift" style="display: flex; flex-direction: column; border-radius: var(--border-radius-md); overflow: hidden; background: var(--bg-card); border: 1px solid var(--border-muted);">
+            <div style="padding: var(--spacing-md); background: linear-gradient(135deg, rgba(168, 85, 247, 0.05) 0%, rgba(0,0,0,0) 100%);">
+              <span style="display: inline-block; padding: 4px 12px; background: rgba(168, 85, 247, 0.15); color: var(--accent-primary); border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: var(--spacing-sm);">Fashion & Boutique</span>
+              <h3 style="font-size: 1.6rem; margin-bottom: var(--spacing-xs); line-height: 1.3;">127 Qualified Leads Generated in 30 Days</h3>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0;"><strong>Client Overview:</strong> A premium boutique specializing in custom bridal wear, designer outfits, and Indo-Western fashion wanted to increase inquiries and store visits.</p>
+            </div>
+            <div style="padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md); flex-grow: 1; display: flex; flex-direction: column;">
+              <div style="margin-bottom: var(--spacing-sm);">
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 8px;"><strong>Challenge:</strong> The business relied heavily on referrals and organic social media reach, resulting in inconsistent lead generation.</p>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 4px;"><strong>Strategy Implemented:</strong></p>
+                <ul style="color: var(--text-secondary); font-size: 0.9rem; padding-left: 20px; margin-bottom: 0; list-style-type: disc;">
+                  <li>Hyperlocal Meta Ads Campaigns</li>
+                  <li>Instagram Engagement Retargeting</li>
+                  <li>WhatsApp Lead Generation Funnel</li>
+                  <li>Creative Showcase Campaigns</li>
+                </ul>
+              </div>
+              <div style="margin-top: auto; padding-top: var(--spacing-sm); border-top: 1px solid var(--border-muted); margin-bottom: var(--spacing-sm);">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-sm);">
+                  <div><div style="color: var(--accent-primary); font-size: 1.4rem; font-weight: 700;">127</div><div style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Qualified Leads</div></div>
+                  <div><div style="color: var(--accent-primary); font-size: 1.4rem; font-weight: 700;">₹68</div><div style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Cost Per Lead</div></div>
+                  <div><div style="color: var(--accent-primary); font-size: 1.4rem; font-weight: 700;">83</div><div style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">WhatsApp Chats</div></div>
+                  <div><div style="color: var(--accent-primary); font-size: 1.4rem; font-weight: 700;">21</div><div style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Store Visits</div></div>
+                </div>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: var(--border-radius-sm); border-left: 3px solid var(--accent-primary);">
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin: 0; line-height: 1.4;"><strong>Key Takeaway:</strong> Targeted local advertising transformed social media engagement into qualified customer inquiries and showroom visits.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Study 2: Manufacturing & Textile -->
+          <div class="card-glass hover-lift" style="display: flex; flex-direction: column; border-radius: var(--border-radius-md); overflow: hidden; background: var(--bg-card); border: 1px solid var(--border-muted);">
+            <div style="padding: var(--spacing-md); background: linear-gradient(135deg, rgba(168, 85, 247, 0.05) 0%, rgba(0,0,0,0) 100%);">
+              <span style="display: inline-block; padding: 4px 12px; background: rgba(168, 85, 247, 0.15); color: var(--accent-primary); border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: var(--spacing-sm);">Manufacturing & Textile</span>
+              <h3 style="font-size: 1.6rem; margin-bottom: var(--spacing-xs); line-height: 1.3;">214 B2B Leads Generated Across India</h3>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0;"><strong>Client Overview:</strong> A fabric manufacturing company looking to attract wholesalers, garment manufacturers, exporters, and bulk buyers.</p>
+            </div>
+            <div style="padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md); flex-grow: 1; display: flex; flex-direction: column;">
+              <div style="margin-bottom: var(--spacing-sm);">
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 8px;"><strong>Challenge:</strong> Business growth depended largely on exhibitions, references, and repeat customers.</p>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 4px;"><strong>Strategy Implemented:</strong></p>
+                <ul style="color: var(--text-secondary); font-size: 0.9rem; padding-left: 20px; margin-bottom: 0; list-style-type: disc;">
+                  <li>B2B Lead Generation Campaigns</li>
+                  <li>Industry-Specific Audience Targeting</li>
+                  <li>WhatsApp Lead Qualification Funnel</li>
+                  <li>Creative Product Showcase Campaigns</li>
+                </ul>
+              </div>
+              <div style="margin-top: auto; padding-top: var(--spacing-sm); border-top: 1px solid var(--border-muted); margin-bottom: var(--spacing-sm);">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-sm);">
+                  <div><div style="color: var(--accent-primary); font-size: 1.4rem; font-weight: 700;">214</div><div style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">B2B Leads</div></div>
+                  <div><div style="color: var(--accent-primary); font-size: 1.4rem; font-weight: 700;">₹52</div><div style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Cost Per Lead</div></div>
+                  <div><div style="color: var(--accent-primary); font-size: 1.4rem; font-weight: 700;">37</div><div style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Serious Discussions</div></div>
+                  <div><div style="color: var(--accent-primary); font-size: 1.4rem; font-weight: 700;">4</div><div style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Bulk Conversions</div></div>
+                </div>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: var(--border-radius-sm); border-left: 3px solid var(--accent-primary);">
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin: 0; line-height: 1.4;"><strong>Key Takeaway:</strong> Digital advertising helped expand market reach beyond traditional sales channels.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Study 3: Healthcare -->
+          <div class="card-glass hover-lift" style="display: flex; flex-direction: column; border-radius: var(--border-radius-md); overflow: hidden; background: var(--bg-card); border: 1px solid var(--border-muted);">
+            <div style="padding: var(--spacing-md); background: linear-gradient(135deg, rgba(168, 85, 247, 0.05) 0%, rgba(0,0,0,0) 100%);">
+              <span style="display: inline-block; padding: 4px 12px; background: rgba(168, 85, 247, 0.15); color: var(--accent-primary); border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: var(--spacing-sm);">Healthcare</span>
+              <h3 style="font-size: 1.6rem; margin-bottom: var(--spacing-xs); line-height: 1.3;">165% Increase in Appointment Requests</h3>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0;"><strong>Client Overview:</strong> A local healthcare clinic seeking more patient appointments and stronger local visibility.</p>
+            </div>
+            <div style="padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md); flex-grow: 1; display: flex; flex-direction: column;">
+              <div style="margin-bottom: var(--spacing-sm);">
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 8px;"><strong>Challenge:</strong> Low awareness among nearby residents and inconsistent patient acquisition.</p>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 4px;"><strong>Strategy Implemented:</strong></p>
+                <ul style="color: var(--text-secondary); font-size: 0.9rem; padding-left: 20px; margin-bottom: 0; list-style-type: disc;">
+                  <li>Local Awareness Campaigns</li>
+                  <li>Appointment-Focused Lead Ads</li>
+                  <li>Google Business Profile Optimization</li>
+                  <li>Remarketing Campaigns</li>
+                </ul>
+              </div>
+              <div style="margin-top: auto; padding-top: var(--spacing-sm); border-top: 1px solid var(--border-muted); margin-bottom: var(--spacing-sm);">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-sm);">
+                  <div><div style="color: var(--accent-primary); font-size: 1.4rem; font-weight: 700;">96</div><div style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Appointment Requests</div></div>
+                  <div><div style="color: var(--accent-primary); font-size: 1.4rem; font-weight: 700;">165%</div><div style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Growth in Bookings</div></div>
+                  <div style="grid-column: span 2;"><div style="color: var(--accent-primary); font-size: 1.1rem; font-weight: 600;">Improved Local SEO &amp; Lower CPA</div><div style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Efficiency metrics</div></div>
+                </div>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: var(--border-radius-sm); border-left: 3px solid var(--accent-primary);">
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin: 0; line-height: 1.4;"><strong>Key Takeaway:</strong> A combination of local targeting and conversion-focused campaigns increased patient inquiries significantly.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Study 4: Restaurant & Cafe -->
+          <div class="card-glass hover-lift" style="display: flex; flex-direction: column; border-radius: var(--border-radius-md); overflow: hidden; background: var(--bg-card); border: 1px solid var(--border-muted);">
+            <div style="padding: var(--spacing-md); background: linear-gradient(135deg, rgba(168, 85, 247, 0.05) 0%, rgba(0,0,0,0) 100%);">
+              <span style="display: inline-block; padding: 4px 12px; background: rgba(168, 85, 247, 0.15); color: var(--accent-primary); border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: var(--spacing-sm);">Restaurant & Cafe</span>
+              <h3 style="font-size: 1.6rem; margin-bottom: var(--spacing-xs); line-height: 1.3;">43% Increase in Weekend Footfall</h3>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0;"><strong>Client Overview:</strong> A restaurant aiming to increase customer visits and improve awareness in its local market.</p>
+            </div>
+            <div style="padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md); flex-grow: 1; display: flex; flex-direction: column;">
+              <div style="margin-bottom: var(--spacing-sm);">
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 8px;"><strong>Challenge:</strong> Strong food quality but limited visibility among nearby audiences.</p>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 4px;"><strong>Strategy Implemented:</strong></p>
+                <ul style="color: var(--text-secondary); font-size: 0.9rem; padding-left: 20px; margin-bottom: 0; list-style-type: disc;">
+                  <li>Hyperlocal Advertising</li>
+                  <li>Offer-Based Campaigns</li>
+                  <li>Food Creative Promotions</li>
+                  <li>Audience Retargeting</li>
+                </ul>
+              </div>
+              <div style="margin-top: auto; padding-top: var(--spacing-sm); border-top: 1px solid var(--border-muted); margin-bottom: var(--spacing-sm);">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-sm);">
+                  <div><div style="color: var(--accent-primary); font-size: 1.4rem; font-weight: 700;">43%</div><div style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Footfall Increase</div></div>
+                  <div><div style="color: var(--accent-primary); font-size: 1.4rem; font-weight: 700;">78K</div><div style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Local Reach</div></div>
+                  <div><div style="color: var(--accent-primary); font-size: 1.4rem; font-weight: 700;">1,200</div><div style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Menu Views</div></div>
+                  <div><div style="color: var(--accent-primary); font-size: 1.4rem; font-weight: 700;">High</div><div style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Brand Engagement</div></div>
+                </div>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: var(--border-radius-sm); border-left: 3px solid var(--accent-primary);">
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin: 0; line-height: 1.4;"><strong>Key Takeaway:</strong> Location-based marketing converted online attention into real customer visits.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Study 5: Real Estate -->
+          <div class="card-glass hover-lift" style="display: flex; flex-direction: column; border-radius: var(--border-radius-md); overflow: hidden; background: var(--bg-card); border: 1px solid var(--border-muted);">
+            <div style="padding: var(--spacing-md); background: linear-gradient(135deg, rgba(168, 85, 247, 0.05) 0%, rgba(0,0,0,0) 100%);">
+              <span style="display: inline-block; padding: 4px 12px; background: rgba(168, 85, 247, 0.15); color: var(--accent-primary); border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: var(--spacing-sm);">Real Estate</span>
+              <h3 style="font-size: 1.6rem; margin-bottom: var(--spacing-xs); line-height: 1.3;">178 Property Leads Generated</h3>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0;"><strong>Client Overview:</strong> A residential project looking to attract homebuyers through digital channels.</p>
+            </div>
+            <div style="padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md); flex-grow: 1; display: flex; flex-direction: column;">
+              <div style="margin-bottom: var(--spacing-sm);">
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 8px;"><strong>Challenge:</strong> Heavy dependence on property portals and offline marketing activities.</p>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 4px;"><strong>Strategy Implemented:</strong></p>
+                <ul style="color: var(--text-secondary); font-size: 0.9rem; padding-left: 20px; margin-bottom: 0; list-style-type: disc;">
+                  <li>Lead Form Campaigns</li>
+                  <li>Property Showcase Advertisements</li>
+                  <li>Location-Based Targeting</li>
+                  <li>Lead Nurturing Funnel</li>
+                </ul>
+              </div>
+              <div style="margin-top: auto; padding-top: var(--spacing-sm); border-top: 1px solid var(--border-muted); margin-bottom: var(--spacing-sm);">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-sm);">
+                  <div><div style="color: var(--accent-primary); font-size: 1.4rem; font-weight: 700;">178</div><div style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Qualified Leads</div></div>
+                  <div><div style="color: var(--accent-primary); font-size: 1.4rem; font-weight: 700;">41</div><div style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Site Visits</div></div>
+                  <div style="grid-column: span 2;"><div style="color: var(--accent-primary); font-size: 1.1rem; font-weight: 600;">Reduced Portal Dependence</div><div style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Higher lead quality</div></div>
+                </div>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: var(--border-radius-sm); border-left: 3px solid var(--accent-primary);">
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin: 0; line-height: 1.4;"><strong>Key Takeaway:</strong> Digital lead generation created a predictable pipeline of prospective buyers.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Study 6: Education -->
+          <div class="card-glass hover-lift" style="display: flex; flex-direction: column; border-radius: var(--border-radius-md); overflow: hidden; background: var(--bg-card); border: 1px solid var(--border-muted);">
+            <div style="padding: var(--spacing-md); background: linear-gradient(135deg, rgba(168, 85, 247, 0.05) 0%, rgba(0,0,0,0) 100%);">
+              <span style="display: inline-block; padding: 4px 12px; background: rgba(168, 85, 247, 0.15); color: var(--accent-primary); border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: var(--spacing-sm);">Education</span>
+              <h3 style="font-size: 1.6rem; margin-bottom: var(--spacing-xs); line-height: 1.3;">243 Student Inquiries Before Admission Season</h3>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0;"><strong>Client Overview:</strong> A coaching institute competing with larger educational brands.</p>
+            </div>
+            <div style="padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md); flex-grow: 1; display: flex; flex-direction: column;">
+              <div style="margin-bottom: var(--spacing-sm);">
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 8px;"><strong>Challenge:</strong> Limited visibility during the critical admission period.</p>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 4px;"><strong>Strategy Implemented:</strong></p>
+                <ul style="color: var(--text-secondary); font-size: 0.9rem; padding-left: 20px; margin-bottom: 0; list-style-type: disc;">
+                  <li>Student Success Campaigns</li>
+                  <li>Parent-Focused Advertising</li>
+                  <li>WhatsApp Inquiry Funnel</li>
+                  <li>Retargeting Campaigns</li>
+                </ul>
+              </div>
+              <div style="margin-top: auto; padding-top: var(--spacing-sm); border-top: 1px solid var(--border-muted); margin-bottom: var(--spacing-sm);">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-sm);">
+                  <div><div style="color: var(--accent-primary); font-size: 1.4rem; font-weight: 700;">243</div><div style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Student Inquiries</div></div>
+                  <div><div style="color: var(--accent-primary); font-size: 1.4rem; font-weight: 700;">87</div><div style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Counseling Sessions</div></div>
+                  <div><div style="color: var(--accent-primary); font-size: 1.4rem; font-weight: 700;">39</div><div style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Admissions</div></div>
+                  <div><div style="color: var(--accent-primary); font-size: 1.4rem; font-weight: 700;">Strong</div><div style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Season ROI</div></div>
+                </div>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: var(--border-radius-sm); border-left: 3px solid var(--accent-primary);">
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin: 0; line-height: 1.4;"><strong>Key Takeaway:</strong> Focused advertising generated consistent inquiries and increased enrollment opportunities.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
-      <section style="background: var(--bg-primary); padding: var(--spacing-xl) var(--spacing-lg); max-width: 1400px; margin: 0 auto;">
-        <div style="text-align: center; margin-bottom: var(--spacing-lg);">
-            <h2 style="font-size: 2.5rem;">What Our Clients Say</h2>
+      <!-- TRUST SECTION -->
+      <section style="background: var(--bg-primary); padding: var(--spacing-lg) var(--spacing-md); text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+          <h2 style="font-size: 2.5rem; margin-bottom: var(--spacing-sm);">Industries We Help Grow</h2>
+          <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto var(--spacing-lg) auto; font-size: 1.1rem;">Our strategies are customized for every industry, ensuring campaigns are built around business goals, customer behavior, and measurable outcomes.</p>
+          
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--spacing-md);">
+            <!-- Fashion -->
+            <div class="card-glass hover-lift" style="padding: var(--spacing-lg) var(--spacing-md); border-radius: var(--border-radius-md); border: 1px solid var(--border-muted); background: linear-gradient(180deg, rgba(168, 85, 247, 0.08) 0%, rgba(255,255,255,0.02) 100%); text-align: center;">
+              <div style="font-size: 3rem; margin-bottom: var(--spacing-sm); filter: drop-shadow(0 0 10px rgba(168,85,247,0.3));">👗</div>
+              <div style="font-weight: 600; font-size: 1.1rem; color: var(--text-primary);">Fashion & Boutique</div>
+            </div>
+            <!-- Manufacturing -->
+            <div class="card-glass hover-lift" style="padding: var(--spacing-lg) var(--spacing-md); border-radius: var(--border-radius-md); border: 1px solid var(--border-muted); background: linear-gradient(180deg, rgba(16, 185, 129, 0.08) 0%, rgba(255,255,255,0.02) 100%); text-align: center;">
+              <div style="font-size: 3rem; margin-bottom: var(--spacing-sm); filter: drop-shadow(0 0 10px rgba(16,185,129,0.3));">🏭</div>
+              <div style="font-weight: 600; font-size: 1.1rem; color: var(--text-primary);">Textile & Manufacturing</div>
+            </div>
+            <!-- Healthcare -->
+            <div class="card-glass hover-lift" style="padding: var(--spacing-lg) var(--spacing-md); border-radius: var(--border-radius-md); border: 1px solid var(--border-muted); background: linear-gradient(180deg, rgba(59, 130, 246, 0.08) 0%, rgba(255,255,255,0.02) 100%); text-align: center;">
+              <div style="font-size: 3rem; margin-bottom: var(--spacing-sm); filter: drop-shadow(0 0 10px rgba(59,130,246,0.3));">🏥</div>
+              <div style="font-weight: 600; font-size: 1.1rem; color: var(--text-primary);">Healthcare</div>
+            </div>
+            <!-- Restaurants -->
+            <div class="card-glass hover-lift" style="padding: var(--spacing-lg) var(--spacing-md); border-radius: var(--border-radius-md); border: 1px solid var(--border-muted); background: linear-gradient(180deg, rgba(245, 158, 11, 0.08) 0%, rgba(255,255,255,0.02) 100%); text-align: center;">
+              <div style="font-size: 3rem; margin-bottom: var(--spacing-sm); filter: drop-shadow(0 0 10px rgba(245,158,11,0.3));">☕</div>
+              <div style="font-weight: 600; font-size: 1.1rem; color: var(--text-primary);">Restaurants & Cafes</div>
+            </div>
+            <!-- Real Estate -->
+            <div class="card-glass hover-lift" style="padding: var(--spacing-lg) var(--spacing-md); border-radius: var(--border-radius-md); border: 1px solid var(--border-muted); background: linear-gradient(180deg, rgba(236, 72, 153, 0.08) 0%, rgba(255,255,255,0.02) 100%); text-align: center;">
+              <div style="font-size: 3rem; margin-bottom: var(--spacing-sm); filter: drop-shadow(0 0 10px rgba(236,72,153,0.3));">🏢</div>
+              <div style="font-weight: 600; font-size: 1.1rem; color: var(--text-primary);">Real Estate</div>
+            </div>
+            <!-- Education -->
+            <div class="card-glass hover-lift" style="padding: var(--spacing-lg) var(--spacing-md); border-radius: var(--border-radius-md); border: 1px solid var(--border-muted); background: linear-gradient(180deg, rgba(99, 102, 241, 0.08) 0%, rgba(255,255,255,0.02) 100%); text-align: center;">
+              <div style="font-size: 3rem; margin-bottom: var(--spacing-sm); filter: drop-shadow(0 0 10px rgba(99,102,241,0.3));">🎓</div>
+              <div style="font-weight: 600; font-size: 1.1rem; color: var(--text-primary);">Education</div>
+            </div>
+            <!-- Professional Services -->
+            <div class="card-glass hover-lift" style="padding: var(--spacing-lg) var(--spacing-md); border-radius: var(--border-radius-md); border: 1px solid var(--border-muted); background: linear-gradient(180deg, rgba(14, 165, 233, 0.08) 0%, rgba(255,255,255,0.02) 100%); text-align: center;">
+              <div style="font-size: 3rem; margin-bottom: var(--spacing-sm); filter: drop-shadow(0 0 10px rgba(14,165,233,0.3));">💼</div>
+              <div style="font-weight: 600; font-size: 1.1rem; color: var(--text-primary);">Professional Services</div>
+            </div>
+            <!-- Local Businesses -->
+            <div class="card-glass hover-lift" style="padding: var(--spacing-lg) var(--spacing-md); border-radius: var(--border-radius-md); border: 1px solid var(--border-muted); background: linear-gradient(180deg, rgba(239, 68, 68, 0.08) 0%, rgba(255,255,255,0.02) 100%); text-align: center;">
+              <div style="font-size: 3rem; margin-bottom: var(--spacing-sm); filter: drop-shadow(0 0 10px rgba(239,68,68,0.3));">🏪</div>
+              <div style="font-weight: 600; font-size: 1.1rem; color: var(--text-primary);">Local Businesses</div>
+            </div>
+          </div>
         </div>
-        <div id="page-testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-md);">
-          <!-- Injected via JS -->
+      </section>
+
+      <!-- FINAL CTA SECTION -->
+      <section style="background: var(--bg-secondary); padding: var(--spacing-lg) var(--spacing-md); text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
+        <h2 style="font-size: 2.8rem; margin-bottom: var(--spacing-sm);">Ready to Become Our Next Success Story?</h2>
+        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto var(--spacing-lg) auto; font-size: 1.15rem;">Let's create a growth strategy tailored to your business and start generating measurable results.</p>
+        
+        <div style="display: flex; gap: var(--spacing-sm); justify-content: center; flex-wrap: wrap; margin-bottom: var(--spacing-lg);">
+          <a href="contact.html" class="btn-pulse" style="display: inline-block; padding: 1rem 2.5rem; background: var(--accent-primary); color: white; border-radius: var(--border-radius-sm); font-weight: 600; text-transform: uppercase;">Book Free Consultation</a>
+          <a href="contact.html" style="display: inline-block; padding: 1rem 2.5rem; background: transparent; border: 1px solid var(--border-muted); color: white; border-radius: var(--border-radius-sm); font-weight: 600; text-transform: uppercase;">Get Free Marketing Audit</a>
+        </div>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-md); justify-content: center; color: var(--text-secondary); font-size: 0.95rem;">
+          <span style="display: flex; align-items: center; gap: 6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Performance Marketing Focused</span>
+          <span style="display: flex; align-items: center; gap: 6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Lead Generation Specialists</span>
+          <span style="display: flex; align-items: center; gap: 6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Data-Driven Strategy</span>
+          <span style="display: flex; align-items: center; gap: 6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Transparent Reporting</span>
         </div>
       </section>
     </main>
 
-    <div id="footer-mount"></div>
+    <div id="footer-mount">
+      <footer style="background-color: var(--bg-secondary); color: var(--text-light); padding: var(--spacing-lg); margin-top: var(--spacing-lg);">
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg);">
+          <div>
+            <h2 style="color: white; margin-bottom: var(--spacing-sm);">YSG<span style="color: var(--accent-primary);">MEDIA</span></h2>
+            <p style="color: var(--text-secondary); margin-bottom: var(--spacing-sm);">We help businesses across India grow with performance marketing, social media management & data-driven strategies.</p>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">&copy; 2026 YSG Media. All Rights Reserved.</p>
+          </div>
+          <div>
+            <h3 style="color: white; margin-bottom: var(--spacing-sm);">Quick Links</h3>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 0.5rem;"><a href="index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a></li>
+              <li style="margin-bottom: 0.5rem;"><a href="services.html" style="color: var(--text-secondary); text-decoration: none;">Services</a></li>
+              <li style="margin-bottom: 0.5rem;"><a href="case-studies.html" style="color: var(--text-secondary); text-decoration: none;">Case Studies</a></li>
+              <li style="margin-bottom: 0.5rem;"><a href="about.html" style="color: var(--text-secondary); text-decoration: none;">About</a></li>
+              <li style="margin-bottom: 0.5rem;"><a href="contact.html" style="color: var(--text-secondary); text-decoration: none;">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="color: white; margin-bottom: var(--spacing-sm);">Contact Us</h3>
+            <p style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px; color: var(--text-secondary);">+91 90960 09125</p>
+            <p style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px; color: var(--text-secondary);">ysgdigitalmedia@gmail.com</p>
+            <p style="display: flex; align-items: flex-start; gap: 8px; color: var(--text-secondary);">Meera Nagar, Wardha, India</p>
+          </div>
+        </div>
+      </footer>
+    </div>
 
     <script type="module" src="assets/js/page-loader.js"></script>
     <script type="module" src="assets/js/animation-engine.js"></script>

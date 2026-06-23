@@ -8,7 +8,7 @@
       "leads": "187% Increase in Leads",
       "cpl": "₹90 Cost Per Lead"
     },
-    "thumbnail": "/assets/images/screenshots/placeholder_dashboard.png"
+    "thumbnail": "/assets/images/case-studies/house-of-revaa.png"
   },
   {
     "id": "karnavati-fabco",
@@ -19,7 +19,7 @@
       "leads": "262% Increase in Leads",
       "cpl": "₹65 Cost Per Lead"
     },
-    "thumbnail": "/assets/images/screenshots/placeholder_dashboard.png"
+    "thumbnail": "/assets/images/case-studies/karnavati-fabco.jpg"
   },
   {
     "id": "the-cafe-story",
@@ -30,6 +30,6 @@
       "leads": "3.5X Increase in Orders",
       "cpl": "₹32 Cost Per Order"
     },
-    "thumbnail": "/assets/images/screenshots/placeholder_dashboard.png"
+    "thumbnail": "/assets/images/case-studies/cafe-story.png"
   }
 ]

@@ -11,27 +11,109 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 
 <body>
-  <div id="header-mount"></div>
+  <div id="header-mount">
+    <header class="global-header">
+      <div class="logo">
+        <a href="index.html" style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; color: var(--text-primary); text-decoration: none;">YSG<span style="color: var(--accent-primary);">MEDIA</span></a>
+      </div>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <div class="mobile-actions">
+          <a href="contact.html" class="btn-primary" style="font-size: 0.9rem; text-decoration: none;">Book Free Consultation</a>
+          <a href="https://wa.me/919096009125" target="_blank" class="wa-link" style="padding: 0.8rem 1.2rem; background: var(--accent-whatsapp); color: white; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none;">WhatsApp Us</a>
+        </div>
+      </nav>
+      <div class="header-actions">
+        <a href="contact.html" class="btn-secondary" style="padding: 0.6rem 1.2rem; background: var(--bg-secondary); color: white; border-radius: var(--border-radius-sm); font-weight: 600; text-decoration: none;">Book Free Consultation</a>
+        <a href="https://wa.me/919096009125" target="_blank" class="wa-link" style="padding: 0.6rem 1rem; background: var(--accent-whatsapp); color: white; border-radius: var(--border-radius-sm); font-weight: 600; display: flex; align-items: center; gap: 8px; text-decoration: none;">WhatsApp Us</a>
+      </div>
+      <button class="hamburger" id="mobile-hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+  </div>
 
   <main>
     <section
-      style="background: var(--bg-secondary); color: white; padding: var(--spacing-xl) var(--spacing-lg); text-align: center;">
+      style="background: var(--bg-secondary); color: white; padding: var(--spacing-lg) var(--spacing-md); text-align: center;">
       <h1 style="font-size: 3.5rem; margin-bottom: var(--spacing-sm); color: white;">Our Digital Marketing Services</h1>
       <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto; font-size: 1.1rem;">End-to-end solutions
         to grow your brand, generate quality leads and increase revenue.</p>
     </section>
 
-    <section style="padding: var(--spacing-xl) var(--spacing-lg); max-width: 1400px; margin: 0 auto;">
+    <section style="padding: var(--spacing-lg) var(--spacing-md); max-width: 1400px; margin: 0 auto;">
       <div id="page-services-grid"
         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-md);">
-        <!-- Injected via JS -->
+        
+        <!-- Meta Ads -->
+        <div class="card-glass hover-lift" style="padding: var(--spacing-lg); border-radius: var(--border-radius-md); background: var(--bg-card); border: 1px solid var(--border-muted); display: flex; flex-direction: column; gap: var(--spacing-sm);">
+          <div style="font-size: 2rem;">♾️</div>
+          <h3 style="margin-bottom: 0;">Meta Ads</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 0; flex-grow: 1;">High-converting Facebook & Instagram ads that bring quality leads and sales.</p>
+          <a href="services/meta-ads.html" style="color: var(--accent-primary); font-weight: 600; font-size: 0.9rem; margin-top: var(--spacing-xs); text-decoration: none;">Learn More &rarr;</a>
+        </div>
+
+        <!-- Google Ads -->
+        <div class="card-glass hover-lift" style="padding: var(--spacing-lg); border-radius: var(--border-radius-md); background: var(--bg-card); border: 1px solid var(--border-muted); display: flex; flex-direction: column; gap: var(--spacing-sm);">
+          <div style="font-size: 2rem;">🔍</div>
+          <h3 style="margin-bottom: 0;">Google Ads</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 0; flex-grow: 1;">Search, Display & YouTube ads that put your business in front of ready-to-buy clients.</p>
+          <a href="services/google-ads.html" style="color: var(--accent-primary); font-weight: 600; font-size: 0.9rem; margin-top: var(--spacing-xs); text-decoration: none;">Learn More &rarr;</a>
+        </div>
+
+        <!-- Social Media Management -->
+        <div class="card-glass hover-lift" style="padding: var(--spacing-lg); border-radius: var(--border-radius-md); background: var(--bg-card); border: 1px solid var(--border-muted); display: flex; flex-direction: column; gap: var(--spacing-sm);">
+          <div style="font-size: 2rem;">📱</div>
+          <h3 style="margin-bottom: 0;">Social Media Management</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 0; flex-grow: 1;">Engaging content, regular posting & community management.</p>
+          <a href="services/social-media-management.html" style="color: var(--accent-primary); font-weight: 600; font-size: 0.9rem; margin-top: var(--spacing-xs); text-decoration: none;">Learn More &rarr;</a>
+        </div>
+
+        <!-- Content Creation -->
+        <div class="card-glass hover-lift" style="padding: var(--spacing-lg); border-radius: var(--border-radius-md); background: var(--bg-card); border: 1px solid var(--border-muted); display: flex; flex-direction: column; gap: var(--spacing-sm);">
+          <div style="font-size: 2rem;">🎨</div>
+          <h3 style="margin-bottom: 0;">Content Creation</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 0; flex-grow: 1;">High-quality creatives, videos & copies that attract and convert.</p>
+          <a href="services/content-creation.html" style="color: var(--accent-primary); font-weight: 600; font-size: 0.9rem; margin-top: var(--spacing-xs); text-decoration: none;">Learn More &rarr;</a>
+        </div>
+
+        <!-- Creative Design -->
+        <div class="card-glass hover-lift" style="padding: var(--spacing-lg); border-radius: var(--border-radius-md); background: var(--bg-card); border: 1px solid var(--border-muted); display: flex; flex-direction: column; gap: var(--spacing-sm);">
+          <div style="font-size: 2rem;">✨</div>
+          <h3 style="margin-bottom: 0;">Creative Design</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 0; flex-grow: 1;">Eye-catching graphics, banners & designs that build your brand.</p>
+          <a href="services/creative-design.html" style="color: var(--accent-primary); font-weight: 600; font-size: 0.9rem; margin-top: var(--spacing-xs); text-decoration: none;">Learn More &rarr;</a>
+        </div>
+
+        <!-- Landing Pages -->
+        <div class="card-glass hover-lift" style="padding: var(--spacing-lg); border-radius: var(--border-radius-md); background: var(--bg-card); border: 1px solid var(--border-muted); display: flex; flex-direction: column; gap: var(--spacing-sm);">
+          <div style="font-size: 2rem;">⚡</div>
+          <h3 style="margin-bottom: 0;">Landing Pages</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 0; flex-grow: 1;">Conversion-focused landing pages that turn visitors into leads.</p>
+          <a href="services/landing-pages.html" style="color: var(--accent-primary); font-weight: 600; font-size: 0.9rem; margin-top: var(--spacing-xs); text-decoration: none;">Learn More &rarr;</a>
+        </div>
+
+        <!-- Analytics & Tracking -->
+        <div class="card-glass hover-lift" style="padding: var(--spacing-lg); border-radius: var(--border-radius-md); background: var(--bg-card); border: 1px solid var(--border-muted); display: flex; flex-direction: column; gap: var(--spacing-sm);">
+          <div style="font-size: 2rem;">📊</div>
+          <h3 style="margin-bottom: 0;">Analytics & Tracking</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 0; flex-grow: 1;">Conversion tracking, analytics setup & performance reporting.</p>
+          <a href="services/analytics-tracking.html" style="color: var(--accent-primary); font-weight: 600; font-size: 0.9rem; margin-top: var(--spacing-xs); text-decoration: none;">Learn More &rarr;</a>
+        </div>
+
       </div>
     </section>
 
-    <section style="background: var(--bg-primary); padding: var(--spacing-xl) var(--spacing-lg); text-align: center;">
+    <section style="background: var(--bg-primary); padding: var(--spacing-lg) var(--spacing-lg); text-align: center;">
       <h2 style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">Ready to scale?</h2>
       <a href="contact.html" class="btn-pulse"
         style="display: inline-block; padding: 1rem 2.5rem; background: var(--accent-primary); color: white; border-radius: var(--border-radius-sm); font-weight: 600; text-transform: uppercase;">Get
@@ -39,7 +121,33 @@
     </section>
   </main>
 
-  <div id="footer-mount"></div>
+  <div id="footer-mount">
+    <footer style="background-color: var(--bg-secondary); color: var(--text-light); padding: var(--spacing-lg); margin-top: var(--spacing-lg);">
+      <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg);">
+        <div>
+          <h2 style="color: white; margin-bottom: var(--spacing-sm);">YSG<span style="color: var(--accent-primary);">MEDIA</span></h2>
+          <p style="color: var(--text-secondary); margin-bottom: var(--spacing-sm);">We help businesses across India grow with performance marketing, social media management & data-driven strategies.</p>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">&copy; 2026 YSG Media. All Rights Reserved.</p>
+        </div>
+        <div>
+          <h3 style="color: white; margin-bottom: var(--spacing-sm);">Quick Links</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.5rem;"><a href="index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="services.html" style="color: var(--text-secondary); text-decoration: none;">Services</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="case-studies.html" style="color: var(--text-secondary); text-decoration: none;">Case Studies</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="about.html" style="color: var(--text-secondary); text-decoration: none;">About</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="contact.html" style="color: var(--text-secondary); text-decoration: none;">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="color: white; margin-bottom: var(--spacing-sm);">Contact Us</h3>
+          <p style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px; color: var(--text-secondary);">+91 90960 09125</p>
+          <p style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px; color: var(--text-secondary);">ysgdigitalmedia@gmail.com</p>
+          <p style="display: flex; align-items: flex-start; gap: 8px; color: var(--text-secondary);">Meera Nagar, Wardha, India</p>
+        </div>
+      </div>
+    </footer>
+  </div>
 
   <script type="module" src="assets/js/page-loader.js"></script>
   <script type="module" src="assets/js/animation-engine.js"></script>

@@ -8,17 +8,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   </head>
   <body>
-    <div id="header-mount"></div>
+    <div id="header-mount">
+      <header class="global-header">
+        <div class="logo">
+          <a href="index.html" style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; color: var(--text-primary); text-decoration: none;">YSG<span style="color: var(--accent-primary);">MEDIA</span></a>
+        </div>
+        <nav class="nav-menu" id="nav-menu">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="case-studies.html">Case Studies</a>
+          <a href="blog.html">Blog</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" class="active">Contact</a>
+          <div class="mobile-actions">
+            <a href="contact.html" class="btn-primary" style="font-size: 0.9rem; text-decoration: none;">Book Free Consultation</a>
+            <a href="https://wa.me/919096009125" target="_blank" class="wa-link" style="padding: 0.8rem 1.2rem; background: var(--accent-whatsapp); color: white; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none;">WhatsApp Us</a>
+          </div>
+        </nav>
+        <div class="header-actions">
+          <a href="contact.html" class="btn-secondary" style="padding: 0.6rem 1.2rem; background: var(--bg-secondary); color: white; border-radius: var(--border-radius-sm); font-weight: 600; text-decoration: none;">Book Free Consultation</a>
+          <a href="https://wa.me/919096009125" target="_blank" class="wa-link" style="padding: 0.6rem 1rem; background: var(--accent-whatsapp); color: white; border-radius: var(--border-radius-sm); font-weight: 600; display: flex; align-items: center; gap: 8px; text-decoration: none;">WhatsApp Us</a>
+        </div>
+        <button class="hamburger" id="mobile-hamburger" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </header>
+    </div>
 
     <main>
-      <section style="background: var(--bg-secondary); color: white; padding: var(--spacing-xl) var(--spacing-lg); text-align: center;">
+      <section style="background: var(--bg-secondary); color: white; padding: var(--spacing-lg) var(--spacing-md); text-align: center;">
         <h1 style="font-size: 3.5rem; margin-bottom: var(--spacing-sm); color: white;">Let's Grow Your Business Together</h1>
         <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto; font-size: 1.1rem;">Book a free consultation call and let's discuss how we can help you get more leads and sales.</p>
       </section>
 
-      <section style="padding: var(--spacing-xl) var(--spacing-lg); max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: var(--spacing-xl);">
+      <section style="padding: var(--spacing-lg) var(--spacing-md); max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: var(--spacing-lg);">
         
         <div class="reveal-on-scroll" style="background: var(--bg-card); padding: var(--spacing-lg); border-radius: var(--border-radius-md); box-shadow: var(--shadow-card); border: 1px solid var(--border-muted);">
           <h2 style="margin-bottom: var(--spacing-md); font-size: 2rem;">Request an Audit</h2>
@@ -63,7 +89,33 @@
 
     </main>
 
-    <div id="footer-mount"></div>
+    <div id="footer-mount">
+      <footer style="background-color: var(--bg-secondary); color: var(--text-light); padding: var(--spacing-lg); margin-top: var(--spacing-lg);">
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg);">
+          <div>
+            <h2 style="color: white; margin-bottom: var(--spacing-sm);">YSG<span style="color: var(--accent-primary);">MEDIA</span></h2>
+            <p style="color: var(--text-secondary); margin-bottom: var(--spacing-sm);">We help businesses across India grow with performance marketing, social media management & data-driven strategies.</p>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">&copy; 2026 YSG Media. All Rights Reserved.</p>
+          </div>
+          <div>
+            <h3 style="color: white; margin-bottom: var(--spacing-sm);">Quick Links</h3>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 0.5rem;"><a href="index.html" style="color: var(--text-secondary); text-decoration: none;">Home</a></li>
+              <li style="margin-bottom: 0.5rem;"><a href="services.html" style="color: var(--text-secondary); text-decoration: none;">Services</a></li>
+              <li style="margin-bottom: 0.5rem;"><a href="case-studies.html" style="color: var(--text-secondary); text-decoration: none;">Case Studies</a></li>
+              <li style="margin-bottom: 0.5rem;"><a href="about.html" style="color: var(--text-secondary); text-decoration: none;">About</a></li>
+              <li style="margin-bottom: 0.5rem;"><a href="contact.html" style="color: var(--text-secondary); text-decoration: none;">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="color: white; margin-bottom: var(--spacing-sm);">Contact Us</h3>
+            <p style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px; color: var(--text-secondary);">+91 90960 09125</p>
+            <p style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px; color: var(--text-secondary);">ysgdigitalmedia@gmail.com</p>
+            <p style="display: flex; align-items: flex-start; gap: 8px; color: var(--text-secondary);">Meera Nagar, Wardha, India</p>
+          </div>
+        </div>
+      </footer>
+    </div>
 
     <script type="module" src="assets/js/page-loader.js"></script>
     <script type="module" src="assets/js/animation-engine.js"></script>

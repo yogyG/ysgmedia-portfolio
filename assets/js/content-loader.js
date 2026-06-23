@@ -2,25 +2,20 @@
 
 export function buildServiceCard(service) {
   return `
-    <div class="card-glass hover-lift reveal-on-scroll delay-100" style="padding: var(--spacing-md); border-radius: var(--border-radius-md); background: var(--bg-card); border: 1px solid var(--border-muted); margin-bottom: var(--spacing-sm);">
-      <div style="color: var(--accent-primary); font-size: 2rem; margin-bottom: var(--spacing-xs);">
-        <!-- Icon Placeholder -->
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="10"></circle>
-          <path d="M12 16v-4"></path>
-          <path d="M12 8h.01"></path>
-        </svg>
+    <div class="card-glass hover-lift" style="padding: var(--spacing-lg); border-radius: var(--border-radius-md); background: var(--bg-card); border: 1px solid var(--border-muted); display: flex; flex-direction: column; gap: var(--spacing-sm);">
+      <div style="font-size: 2rem;">
+        ${service.icon}
       </div>
-      <h3 style="margin-bottom: var(--spacing-xs);">${service.title}</h3>
-      <p style="color: var(--text-secondary); margin-bottom: var(--spacing-sm);">${service.description}</p>
-      <a href="/services.html#${service.id}" style="color: var(--accent-primary); font-weight: 600; font-size: 0.9rem;">${service.ctaText} &rarr;</a>
+      <h3 style="margin-bottom: 0;">${service.title}</h3>
+      <p style="color: var(--text-secondary); margin-bottom: 0; flex-grow: 1;">${service.description}</p>
+      <a href="services.html#${service.id}" style="color: var(--accent-primary); font-weight: 600; font-size: 0.9rem; margin-top: var(--spacing-xs); text-decoration: none;">${service.ctaText} &rarr;</a>
     </div>
   `;
 }
 
 export function buildCaseStudyCard(caseStudy, testimonial) {
   return `
-    <div class="card-glass hover-lift reveal-on-scroll" style="display: flex; flex-direction: column; border-radius: var(--border-radius-md); overflow: hidden; background: var(--bg-card); border: 1px solid var(--border-muted);">
+    <div class="card-glass hover-lift" style="display: flex; flex-direction: column; border-radius: var(--border-radius-md); overflow: hidden; background: var(--bg-card); border: 1px solid var(--border-muted);">
       <div style="height: 200px; background-color: var(--bg-secondary); background-image: url('${caseStudy.thumbnail}'); background-size: cover; background-position: center;"></div>
       <div style="padding: var(--spacing-md);">
         <h3 style="margin-bottom: var(--spacing-xs);">${caseStudy.client}</h3>
@@ -44,7 +39,7 @@ export function buildCaseStudyCard(caseStudy, testimonial) {
 
 export function buildTestimonialCard(testimonial) {
   return `
-    <div class="card-glass hover-lift reveal-on-scroll" style="padding: var(--spacing-md); border-radius: var(--border-radius-md); background: var(--bg-card); border: 1px solid var(--border-muted);">
+    <div class="card-glass hover-lift" style="padding: var(--spacing-md); border-radius: var(--border-radius-md); background: var(--bg-card); border: 1px solid var(--border-muted);">
       <div style="color: #FBBF24; margin-bottom: var(--spacing-xs); font-size: 1.2rem;">
         ${'★'.repeat(testimonial.rating)}${'☆'.repeat(5 - testimonial.rating)}
       </div>
