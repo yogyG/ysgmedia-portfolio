@@ -39,7 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const follower = document.getElementById('custom-cursor-follower');
   let mouseX = 0, mouseY = 0, followerX = 0, followerY = 0;
 
-  if (cursor && follower && !("ontouchstart" in window)) {
+  // Use matchMedia to detect if the primary input is a mouse (fine pointer)
+  if (cursor && follower && window.matchMedia("(pointer: fine)").matches) {
     document.body.classList.add('custom-cursor-active');
     
     document.addEventListener('mousemove', (e) => {
