@@ -15,24 +15,27 @@ document.addEventListener('DOMContentLoaded', () => {
  * 0. Mobile Hamburger Menu Toggle
  */
 function initMobileNav() {
-  const hamburger = document.getElementById('mobile-hamburger');
-  const navMenu = document.getElementById('nav-menu');
-  
-  if (hamburger && navMenu) {
-    hamburger.addEventListener('click', (e) => {
+  document.addEventListener('click', (e) => {
+    const hamburger = e.target.closest('#mobile-hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    
+    // If clicked on hamburger
+    if (hamburger && navMenu) {
       e.stopPropagation();
       navMenu.classList.toggle('active');
       hamburger.classList.toggle('active');
-    });
+      return;
+    }
 
-    // Close menu if user clicks outside of header
-    document.addEventListener('click', (e) => {
-      if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+    // Close menu if clicking outside of an open menu
+    if (navMenu && navMenu.classList.contains('active')) {
+      const activeHamburger = document.getElementById('mobile-hamburger');
+      if (!navMenu.contains(e.target) && activeHamburger && !activeHamburger.contains(e.target)) {
         navMenu.classList.remove('active');
-        hamburger.classList.remove('active');
+        activeHamburger.classList.remove('active');
       }
-    });
-  }
+    }
+  });
 }
 
 /**
