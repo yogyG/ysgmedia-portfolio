@@ -43,7 +43,7 @@
    Custom Cursor 
 -------------------- */
 body.custom-cursor-active {
-  cursor: none; /* Only hide cursor when JS confirms it works */
+  cursor: none !important; /* Force hide cursor when JS confirms it works */
 }
 
 body.custom-cursor-active a, 
@@ -52,7 +52,7 @@ body.custom-cursor-active input,
 body.custom-cursor-active textarea, 
 body.custom-cursor-active .magnetic-btn, 
 body.custom-cursor-active .hover-target {
-  cursor: none;
+  cursor: none !important;
 }
 
 #custom-cursor {
