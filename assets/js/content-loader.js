@@ -45,7 +45,7 @@ export function buildTestimonialCard(testimonial) {
       </div>
       <p style="color: var(--text-secondary); font-style: italic; margin-bottom: var(--spacing-sm);">"${testimonial.quote}"</p>
       <div style="display: flex; align-items: center; gap: var(--spacing-sm); margin-top: var(--spacing-sm);">
-        <img src="${testimonial.avatarUrl || 'assets/images/logos/placeholder_avatar.png'}" alt="Avatar" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--bg-primary);" />
+        <img src="${testimonial.avatarUrl || '/images/logos/placeholder_avatar.png'}" alt="Avatar" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--bg-primary);" />
         <div style="font-weight: 600; font-size: 0.9rem; color: var(--text-primary);">${testimonial.clientName}</div>
       </div>
     </div>
