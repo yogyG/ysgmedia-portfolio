@@ -26,34 +26,13 @@ function initHome() {
     if (heroWa) heroWa.href = waUrl;
     if (footerWa) footerWa.href = waUrl;
 
-    // 4. Render Services Grid
-    const servicesGrid = document.getElementById('services-grid');
-    if (servicesGrid) {
-      servicesGrid.innerHTML = services.map(s => buildServiceCard(s)).join('');
-    }
+    // 4. Render Services Grid removed to preserve hardcoded services in index.html
 
-    // 5. Render Case Studies (First 3)
-    const casesGrid = document.getElementById('cases-grid');
-    if (casesGrid) {
-      casesGrid.innerHTML = caseStudies.slice(0, 3).map(cs => buildCaseStudyCard(cs)).join('');
-    }
+    // 5. Render Case Studies removed to preserve hardcoded case studies in index.html
 
-    // 5.5 Render Industries
-    const industriesGrid = document.getElementById('industries-grid');
-    if (industriesGrid) {
-      industriesGrid.innerHTML = industries.map((ind, index) => `
-        <div class="hover-lift reveal-on-scroll delay-${(index % 4) * 100}" style="padding: var(--spacing-md); text-align: center; background: var(--bg-card); border-radius: var(--border-radius-sm); border: 1px solid var(--border-muted); flex: 1 1 150px;">
-           <div style="color: var(--accent-primary); font-size: 2rem; margin-bottom: var(--spacing-xs);">🏢</div>
-           <div style="font-weight: 600; font-size: 0.9rem;">${ind.name}</div>
-        </div>
-      `).join('');
-    }
+    // 5.5 Render Industries removed to preserve hardcoded industries in index.html
 
-    // 6. Render Testimonials
-    const testGrid = document.getElementById('testimonials-grid');
-    if (testGrid) {
-      testGrid.innerHTML = testimonials.map(t => buildTestimonialCard(t)).join('');
-    }
+    // 6. Render Testimonials removed to preserve hardcoded testimonials in index.html
 
     // 7. Init Auto-scroll for mobile carousels
     const carousels = document.querySelectorAll('.mobile-carousel');
