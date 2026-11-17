@@ -33,73 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ----------------------------------------------------
-  // 2. Magnetic Custom Cursor
+  // 2. Magnetic Custom Cursor Fallback (Handled natively by cursor.js)
   // ----------------------------------------------------
-  const cursor = document.getElementById('custom-cursor');
-  const follower = document.getElementById('custom-cursor-follower');
-  let mouseX = 0, mouseY = 0, followerX = 0, followerY = 0;
-
-  // Initialize on screens larger than 768px (tablets/desktops) to ensure it runs unconditionally for the user
-  if (cursor && follower && window.innerWidth > 768) {
-    document.body.classList.add('custom-cursor-active');
-    
-    document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      
-      // Instant follow for main dot
-      cursor.style.left = mouseX + 'px';
-      cursor.style.top = mouseY + 'px';
-    });
-
-    // Smooth follow for the outer ring
-    if (typeof gsap !== 'undefined') {
-      gsap.ticker.add(() => {
-        followerX += (mouseX - followerX) * 0.15;
-        followerY += (mouseY - followerY) * 0.15;
-        follower.style.left = followerX + 'px';
-        follower.style.top = followerY + 'px';
-      });
-    }
-
-    // Cursor Hover Effects
-    const interactiveElements = document.querySelectorAll('a, button, input, .card-glass');
-    interactiveElements.forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        document.body.classList.add('cursor-hover');
-      });
-      el.addEventListener('mouseleave', () => {
-        document.body.classList.remove('cursor-hover');
-      });
-    });
-
-    // Magnetic Button Logic
-    const magneticButtons = document.querySelectorAll('.btn-primary, .btn-secondary, .btn-outline');
-    if (typeof gsap !== 'undefined') {
-      magneticButtons.forEach(btn => {
-        btn.addEventListener('mousemove', (e) => {
-          const rect = btn.getBoundingClientRect();
-          const x = e.clientX - rect.left - rect.width / 2;
-          const y = e.clientY - rect.top - rect.height / 2;
-          
-          gsap.to(btn, {
-            x: x * 0.3,
-            y: y * 0.3,
-            duration: 0.4,
-            ease: "power2.out"
-          });
-        });
-        
-        btn.addEventListener('mouseleave', () => {
-          gsap.to(btn, {
-            x: 0,
-            y: 0,
-            duration: 0.7,
-            ease: "elastic.out(1, 0.3)"
-          });
-        });
-      });
-    }
+  if (!document.body.classList.contains('custom-cursor-active') && typeof window.initCustomCursor === 'function') {
+    window.initCustomCursor();
   }
 
   // ----------------------------------------------------

@@ -8,16 +8,22 @@ import industries from '../../data/industries.json';
 
 function initHome() {
   try {
-    // 2. Inject Header & Footer
+    // 2. Inject Header & Footer only if mount points are empty (prevents overwriting static HTML)
     const headerMount = document.getElementById('header-mount');
-    if (headerMount) headerMount.innerHTML = generateHeader(company, 'home');
+    if (headerMount && headerMount.children.length === 0) {
+      headerMount.innerHTML = generateHeader(company, 'home');
+    }
 
     const footerMount = document.getElementById('footer-mount');
-    if (footerMount) footerMount.innerHTML = generateFooter(company, contact);
+    if (footerMount && footerMount.children.length === 0) {
+      footerMount.innerHTML = generateFooter(company, contact);
+    }
 
-    // 3. Inject Dynamic Copy
+    // 3. Inject Dynamic Copy only if empty
     const taglineObj = document.getElementById('hero-tagline');
-    if (taglineObj) taglineObj.textContent = company.tagline;
+    if (taglineObj && !taglineObj.textContent.trim()) {
+      taglineObj.textContent = company.tagline;
+    }
 
     // Build WhatsApp Links
     const waUrl = 'https://wa.me/message/TES4XUVEGSGBC1';

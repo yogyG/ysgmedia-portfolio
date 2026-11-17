@@ -43,13 +43,15 @@
    Custom Cursor 
 -------------------- */
 body.custom-cursor-active {
-  cursor: none !important; /* Force hide cursor when JS confirms it works */
+  cursor: none !important; /* Force hide cursor when JS confirms fine pointer works */
 }
 
 body.custom-cursor-active a, 
 body.custom-cursor-active button, 
 body.custom-cursor-active input, 
 body.custom-cursor-active textarea, 
+body.custom-cursor-active select,
+body.custom-cursor-active [role="button"],
 body.custom-cursor-active .magnetic-btn, 
 body.custom-cursor-active .hover-target {
   cursor: none !important;
@@ -66,8 +68,10 @@ body.custom-cursor-active .hover-target {
   pointer-events: none;
   z-index: 100000;
   transform: translate(-50%, -50%);
-  transition: width 0.2s, height 0.2s, background-color 0.2s;
+  transition: width 0.2s, height 0.2s, background-color 0.2s, opacity 0.2s ease;
   mix-blend-mode: exclusion;
+  opacity: 0; /* Hidden by default; only shown when JS confirms active mouse */
+  will-change: transform;
 }
 
 #custom-cursor-follower {
@@ -81,7 +85,14 @@ body.custom-cursor-active .hover-target {
   pointer-events: none;
   z-index: 99999;
   transform: translate(-50%, -50%);
-  transition: width 0.3s, height 0.3s, background-color 0.3s, border-color 0.3s;
+  transition: width 0.3s, height 0.3s, background-color 0.3s, border-color 0.3s, opacity 0.2s ease;
+  opacity: 0; /* Hidden by default; only shown when JS confirms active mouse */
+  will-change: transform;
+}
+
+body.custom-cursor-active #custom-cursor,
+body.custom-cursor-active #custom-cursor-follower {
+  opacity: 1;
 }
 
 /* Cursor Hover States */
@@ -96,6 +107,13 @@ body.cursor-hover #custom-cursor-follower {
   width: 0;
   height: 0;
   opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #custom-cursor,
+  #custom-cursor-follower {
+    transition: none !important;
+  }
 }
 
 body.cursor-view-project #custom-cursor::after {

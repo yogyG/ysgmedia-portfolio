@@ -10,13 +10,13 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        services: resolve(__dirname, 'services.html'),
-        caseStudies: resolve(__dirname, 'case-studies.html'),
-        industries: resolve(__dirname, 'industries.html'),
-        blog: resolve(__dirname, 'blog.html'),
-        about: resolve(__dirname, 'about.html'),
-        contact: resolve(__dirname, 'contact.html'),
-        landing: resolve(__dirname, 'landing.html'),
+        services: resolve(__dirname, 'services/index.html'),
+        caseStudies: resolve(__dirname, 'case-studies/index.html'),
+        industries: resolve(__dirname, 'industries/index.html'),
+        blog: resolve(__dirname, 'blog/index.html'),
+        about: resolve(__dirname, 'about/index.html'),
+        contact: resolve(__dirname, 'contact/index.html'),
+        landing: resolve(__dirname, 'landing/index.html'),
         blog_b2b: resolve(__dirname, 'blog/b2b-lead-generation-for-manufacturers.html'),
         blog_google_vs_meta: resolve(__dirname, 'blog/google-ads-vs-meta-ads.html'),
         blog_gbp: resolve(__dirname, 'blog/google-business-profile-guide.html'),
@@ -29,11 +29,12 @@ export default defineConfig({
         services_landing_pages: resolve(__dirname, 'services/landing-pages.html'),
         services_meta_ads: resolve(__dirname, 'services/meta-ads.html'),
         services_social_media: resolve(__dirname, 'services/social-media-management.html'),
+                                                                        city_amravati: resolve(__dirname, 'amravati/index.html'),
+        city_chandrapur: resolve(__dirname, 'chandrapur/index.html'),
         city_nagpur: resolve(__dirname, 'nagpur/index.html'),
         city_wadi: resolve(__dirname, 'wadi/index.html'),
-        city_chandrapur: resolve(__dirname, 'chandrapur/index.html'),
-        city_amravati: resolve(__dirname, 'amravati/index.html')
-      }
+        city_wardha: resolve(__dirname, 'wardha/index.html')
+}
     }
   }
 });

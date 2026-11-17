@@ -3,7 +3,10 @@
  * Governs dynamic UI triggers, text loops, counters, and scroll animations.
  */
 
+import { initCustomCursor } from './cursor.js';
+
 document.addEventListener('DOMContentLoaded', () => {
+  initCustomCursor();
   initScrollReveals();
   initTextLoop();
   initCounters();

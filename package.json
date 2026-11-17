@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "build:cities": "python build.py",
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
