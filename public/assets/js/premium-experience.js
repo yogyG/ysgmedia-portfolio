@@ -1,5 +1,9 @@
 // premium-experience.js - Core logic for premium interactions
 
+export function initPremiumFeatures() {
+  // Exported for module bundler compatibility
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // ----------------------------------------------------
   // 1. Lenis Smooth Scroll Setup

@@ -29,7 +29,7 @@ export default defineConfig({
         services_landing_pages: resolve(__dirname, 'services/landing-pages.html'),
         services_meta_ads: resolve(__dirname, 'services/meta-ads.html'),
         services_social_media: resolve(__dirname, 'services/social-media-management.html'),
-                                                                        city_amravati: resolve(__dirname, 'amravati/index.html'),
+                                                                                city_amravati: resolve(__dirname, 'amravati/index.html'),
         city_chandrapur: resolve(__dirname, 'chandrapur/index.html'),
         city_nagpur: resolve(__dirname, 'nagpur/index.html'),
         city_wadi: resolve(__dirname, 'wadi/index.html'),

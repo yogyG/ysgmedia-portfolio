@@ -210,20 +210,11 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="../assets/js/vendor/three.min.js"></script>
-
-  <script type="module">
-    import { initPremiumFeatures } from '../assets/js/premium-experience.js';
-    import { initHeroParticles } from '../assets/js/hero-particles.js';
-
-    document.addEventListener('DOMContentLoaded', () => {
-      initPremiumFeatures();
-      initHeroParticles();
-    });
-  </script>
-
-  <!-- Using standard script tag for contact.js as it listens to DOMContentLoaded directly -->
-  <script src="../assets/js/contact.js"></script>
+  <script src="/assets/js/vendor/three.min.js" defer></script>
+  <script type="module" src="../assets/js/cursor.js"></script>
+  <script type="module" src="../assets/js/premium-experience.js"></script>
+  <script type="module" src="../assets/js/hero-particles.js"></script>
+  <script type="module" src="../assets/js/contact.js"></script>
 </body>
 
 </html>
