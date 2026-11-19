@@ -134,9 +134,13 @@ export function generateFooter(companyData, contactData) {
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
             ${contactData.email}
           </p>
-          <p style="display: flex; align-items: flex-start; gap: 8px; color: var(--text-secondary);">
+          <p style="margin-bottom: 0.5rem; display: flex; align-items: flex-start; gap: 8px; color: var(--text-secondary);">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             ${contactData.address.street}, ${contactData.address.city}, ${contactData.address.country}
+          </p>
+          <p style="display: flex; align-items: flex-start; gap: 8px; color: var(--text-secondary);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            near Purushottam Bazar, Adarsh Nagar, Zingabai Takli, Nagpur
           </p>
           <div style="margin-top: 1.5rem; display: flex; gap: 1.2rem;">
             <!-- Instagram -->

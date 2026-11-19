@@ -1,9 +1,14 @@
 {
-  "phone": "+91 90960 09125",
+  "phone": "+91 90216 59173",
   "email": "ysgdigitalmedia@gmail.com",
   "address": {
     "street": "Meera Nagar",
     "city": "Wardha",
+    "country": "India"
+  },
+  "branchAddress": {
+    "street": "near Purushottam Bazar, Adarsh Nagar, Zingabai Takli",
+    "city": "Nagpur",
     "country": "India"
   }
 }
